@@ -14,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 22
+        minSdkVersion 24
         targetSdkVersion 30
         applicationId 'com.DefaultCompany.maintest'
         ndk {
@@ -29,15 +29,6 @@ android {
         ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
     }
 
-    signingConfigs {
-        release {
-            storeFile file('C:/Users/parks/.android/user.keystore')
-            storePassword '202121'
-            keyAlias 'sungmeow'
-            keyPassword '202121'
-        }
-    }
-
     lintOptions {
         abortOnError false
     }
@@ -46,13 +37,13 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
             jniDebuggable true
         }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt')
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
         }
     }
 

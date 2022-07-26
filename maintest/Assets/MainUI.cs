@@ -5,9 +5,8 @@ using UnityEngine;
 public enum BTNType
 {
     Home,
-    GoAR,
-    GoMiniGame
-
+    GoMiniGame,
+    GoAR
 }
 public class MainUI : MonoBehaviour
 {
