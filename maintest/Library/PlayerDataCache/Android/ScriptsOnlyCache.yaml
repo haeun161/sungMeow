@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - BtnType
     - CameraResolution
     - MainUI
+    - UpAndDownBtnType
+    - UpAndDownUI
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -72,6 +74,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: BtnType
     methodName: OnBtnClick
+  - assembly: Assembly-CSharp
+    fullTypeName: UpAndDownBtnType
+    methodName: OnBtnClick
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -97,35 +102,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1752}
+      Script: {instanceID: 1544}
     - Class: 114
-      Script: {instanceID: 2378}
+      Script: {instanceID: 2212}
     - Class: 114
-      Script: {instanceID: 2682}
+      Script: {instanceID: 2516}
     - Class: 114
-      Script: {instanceID: 2816}
+      Script: {instanceID: 2650}
     - Class: 114
-      Script: {instanceID: 3044}
+      Script: {instanceID: 2878}
     - Class: 114
-      Script: {instanceID: 3296}
+      Script: {instanceID: 3130}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 4310}
+      Script: {instanceID: 4144}
     - Class: 114
-      Script: {instanceID: 4422}
+      Script: {instanceID: 4256}
     - Class: 114
-      Script: {instanceID: 4692}
+      Script: {instanceID: 4526}
     - Class: 114
-      Script: {instanceID: 5472}
+      Script: {instanceID: 5306}
     - Class: 114
-      Script: {instanceID: 6090}
+      Script: {instanceID: 5924}
     - Class: 114
-      Script: {instanceID: 6244}
+      Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 6590}
+      Script: {instanceID: 6424}
     - Class: 114
-      Script: {instanceID: 8400}
+      Script: {instanceID: 8240}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -144,19 +149,72 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
+    Assets/Scenes/UpAndDown/UpAndDown2.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1544}
+    - Class: 114
+      Script: {instanceID: 2878}
+    - Class: 114
+      Script: {instanceID: 3182}
+    - Class: 114
+      Script: {instanceID: 5306}
+    - Class: 114
+      Script: {instanceID: 5924}
+    - Class: 114
+      Script: {instanceID: 6078}
+    - Class: 114
+      Script: {instanceID: 24374}
+    - Class: 114
+      Script: {instanceID: 25746}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UIElements
-    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1048,6 +1106,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindtheCatUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnParticleCollisionMessageListener
@@ -1057,6 +1121,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseOverMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0ea15b90519b0d19275927813db03a57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindtheCatBtnType
   - hash:
       serializedVersion: 2
       Hash: 2574ac7d50617d23cdefe4ad22f5e1ad
@@ -1153,7 +1223,20 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpAndDownUI
+  - hash:
+      serializedVersion: 2
+      Hash: 0ea15b90519b0d19275927813db03a57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpAndDownBtnType
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/haeun/Documents/SungMeow22/sungMeow/maintest/main1.apk
+  - Assets/Scenes/UpAndDown/UpAndDown2.unity
+  playerPath: "C:/Users/handa/OneDrive/\uBC14\uD0D5 \uD654\uBA74/hi.apk"

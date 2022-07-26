@@ -294,8 +294,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.VRModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.5f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/mono/Managed/UnityEngine.XRModule.dll"
--r:"C:/Users/haeun/Documents/SungMeow22/sungMeow/maintest/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
--r:"C:/Users/haeun/Documents/SungMeow22/sungMeow/maintest/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"C:/Users/handa/OneDrive/바탕 화면/sungMeow/maintest/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
+-r:"C:/Users/handa/OneDrive/바탕 화면/sungMeow/maintest/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Services.Core.Environments.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.Services.Core.ref.dll"
@@ -309,6 +309,8 @@
 "Assets/avoidRain/avoidRainUI.cs"
 "Assets/BtnType.cs"
 "Assets/CameraResolution.cs"
+"Assets/FindtheCat/FindtheCatBtnType.cs"
+"Assets/FindtheCat/FindtheCatUI.cs"
 "Assets/MainUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
@@ -344,6 +346,8 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/UpAndDown/UpAndDownBtnType.cs"
+"Assets/UpAndDown/UpAndDownUI.cs"
 -langversion:9.0
 
 /deterministic
