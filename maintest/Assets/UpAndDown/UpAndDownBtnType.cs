@@ -1,21 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class UpAndDownBtnType : MonoBehaviour
 {
 
     public UpAndDownBTNType currentType;
- //   int num = new Random(0,100);
     public void OnBtnClick()
     {
         switch (currentType)
         {
             case UpAndDownBTNType.Start:
-                Debug.Log("UpDownSTart");
-                SceneManager.LoadScene("UpAndDown3");
+                Debug.Log("start!");
                 break;
             case UpAndDownBTNType.num1:
                 Debug.Log("num1");
