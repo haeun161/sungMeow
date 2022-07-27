@@ -17,8 +17,8 @@ public class avoidRainBtnType : MonoBehaviour
                 SceneManager.LoadScene("avoidRain2");
                 break;
             case avoidRainBTNType.start2:
-                Debug.Log("시작2");
                 SceneManager.LoadScene("avoidRain3");
+                Debug.Log("시작2");
                 break;
             case avoidRainBTNType.left:
                 Debug.Log("왼쪽");
