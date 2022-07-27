@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum FindtheCatBTNType
 {
-    start,
+    start1,
+    start2,
     TreeButton,
     RoofButton,
     WallButton
