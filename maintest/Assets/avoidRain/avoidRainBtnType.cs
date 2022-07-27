@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class avoidRainBtnType : MonoBehaviour
@@ -13,9 +14,11 @@ public class avoidRainBtnType : MonoBehaviour
         {
             case avoidRainBTNType.start1:
                 Debug.Log("시작1");
+                SceneManager.LoadScene("avoidRain2");
                 break;
             case avoidRainBTNType.start2:
                 Debug.Log("시작2");
+                SceneManager.LoadScene("avoidRain3");
                 break;
             case avoidRainBTNType.left:
                 Debug.Log("왼쪽");

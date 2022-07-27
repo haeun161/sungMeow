@@ -355,6 +355,7 @@
 "Assets/avoidRain/avoidRainUI.cs"
 "Assets/BtnType.cs"
 "Assets/CameraResolution.cs"
+"Assets/Change1.cs"
 "Assets/FindtheCat/FindtheCatBtnType.cs"
 "Assets/FindtheCat/FindtheCatUI.cs"
 "Assets/MainUI.cs"
