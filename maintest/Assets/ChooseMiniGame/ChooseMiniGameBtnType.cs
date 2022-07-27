@@ -18,7 +18,7 @@ public class ChooseMiniGameBtnType : MonoBehaviour
                 break;
             case ChooseMiniGameBTNType.FindACat:
                 Debug.Log("findcat!");
-                SceneManager.LoadScene("FindtheCat");
+                SceneManager.LoadScene("FindtheCat1");
                 Debug.Log("findcat!");
                 break;
             case ChooseMiniGameBTNType.UpAndDown:
