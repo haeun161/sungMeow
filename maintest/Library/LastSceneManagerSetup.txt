@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/UpAndDown/UpAndDown.unity
-=======
-- path: Assets/Scenes/avoidRain/avoidRain1.unity
->>>>>>> 76c5f501e2b7733cc3ae3027a1b932549145c4cf
   isLoaded: 1
   isActive: 1
   isSubScene: 0
