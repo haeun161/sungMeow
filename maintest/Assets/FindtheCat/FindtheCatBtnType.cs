@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class FindtheCatBtnType : MonoBehaviour
 {
     public FindtheCatBTNType currentType;
+    private int trial = 0;
+
     public void OnBtnClick()
     {
         Debug.Log("1차 테스트");
@@ -84,5 +86,15 @@ public class FindtheCatBtnType : MonoBehaviour
         }
         
     }
-   
+
+    void Update()
+    {
+        //trialText.text = "시행 횟수 : " + trial.ToString();
+    }
+
+    private void FixedUpdate()
+    {
+        if (Input.GetButtonDown("Fire1")) trial++;
+    }
+
 }
