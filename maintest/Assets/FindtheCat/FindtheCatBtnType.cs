@@ -11,6 +11,25 @@ public class FindtheCatBtnType : MonoBehaviour
         Debug.Log("1차 테스트");
         int result = Random.Range(0, 3);
 
+       void find()
+        {
+            if (result == 0)
+            {
+                Debug.Log("고양이는 나무에 숨어있었네요!!");
+                SceneManager.LoadScene("FindtheCat4-1");
+            }
+            if (result == 1)
+            {
+                Debug.Log("고양이는 지붕에 숨어있었네요!!");
+                SceneManager.LoadScene("FindtheCat4-2");
+            }
+            else
+            {
+                Debug.Log("고양이는 담장 위에 숨어있었네요!!");
+                SceneManager.LoadScene("FindtheCat4-3");
+            }
+        }
+
         //for(int trial=0; trial<3;trial++)
         switch (currentType)
         {
@@ -28,10 +47,12 @@ public class FindtheCatBtnType : MonoBehaviour
                 if (result == 0)
                 {
                     Debug.Log("고양이를 찾았어요!!");
+                    SceneManager.LoadScene("FindtheCat4-1");
                 }
                 else
                 {
                     Debug.Log("아쉽지만 고양이가 여기에는 없어요:(");
+                    find();
                 }
                 break;
 
@@ -39,23 +60,29 @@ public class FindtheCatBtnType : MonoBehaviour
                 if (result == 1)
                 {
                     Debug.Log("고양이를 찾았어요!!");
+                    SceneManager.LoadScene("FindtheCat4-2");
                 }
                 else
                 {
                     Debug.Log("아쉽지만 고양이가 여기에는 없어요:(");
+                    find();
                 }
                 break;
             case FindtheCatBTNType.WallButton:
                 if (result == 2)
                 {
                     Debug.Log("고양이를 찾았어요!!");
+                    SceneManager.LoadScene("FindtheCat4-3");
                 }
                 else
                 {
                     Debug.Log("아쉽지만 고양이가 여기에는 없어요:(");
+                    find();
                 }
                 break;
 
         }
+        
     }
+   
 }
