@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class FindtheCatBtnType : MonoBehaviour
 {
     public FindtheCatBTNType currentType;
-    private int trial = 0;
+    //private int trial = 0;
 
     public void OnBtnClick()
     {
@@ -18,17 +18,17 @@ public class FindtheCatBtnType : MonoBehaviour
             if (result == 0)
             {
                 Debug.Log("고양이는 나무에 숨어있었네요!!");
-                SceneManager.LoadScene("FindtheCat4-2");
+                SceneManager.LoadScene("FindtheCat5-2");
             }
             if (result == 1)
             {
                 Debug.Log("고양이는 지붕에 숨어있었네요!!");
-                SceneManager.LoadScene("FindtheCat5-2");
+                SceneManager.LoadScene("FindtheCat6-2");
             }
             else
             {
                 Debug.Log("고양이는 담장 위에 숨어있었네요!!");
-                SceneManager.LoadScene("FindtheCat6-2");
+                SceneManager.LoadScene("FindtheCat7-2");
             }
         }
 
@@ -46,20 +46,10 @@ public class FindtheCatBtnType : MonoBehaviour
                 break;
 
             case FindtheCatBTNType.TreeButton:
-                if (result == 0)
-                {
-                    Debug.Log("고양이를 찾았어요!!");
-                    SceneManager.LoadScene("FindtheCat4-1");
-                }
-                else
-                {
-                    Debug.Log("아쉽지만 고양이가 여기에는 없어요:(");
-                    find();
-                }
-                break;
 
-            case FindtheCatBTNType.RoofButton:
-                if (result == 1)
+                SceneManager.LoadScene("FindtheCat4-1");
+
+                if (result == 0)
                 {
                     Debug.Log("고양이를 찾았어요!!");
                     SceneManager.LoadScene("FindtheCat5-1");
@@ -70,8 +60,11 @@ public class FindtheCatBtnType : MonoBehaviour
                     find();
                 }
                 break;
-            case FindtheCatBTNType.WallButton:
-                if (result == 2)
+
+            case FindtheCatBTNType.RoofButton:
+                SceneManager.LoadScene("FindtheCat4-2");
+
+                if (result == 1)
                 {
                     Debug.Log("고양이를 찾았어요!!");
                     SceneManager.LoadScene("FindtheCat6-1");
@@ -82,9 +75,22 @@ public class FindtheCatBtnType : MonoBehaviour
                     find();
                 }
                 break;
-            case FindtheCatBTNType.restart:
-                Debug.Log("게임 다시 시작");
-                SceneManager.LoadScene("FindtheCat3");
+            case FindtheCatBTNType.WallButton:
+                SceneManager.LoadScene("FindtheCat4-3");
+                if (result == 2)
+                {
+                    Debug.Log("고양이를 찾았어요!!");
+                    SceneManager.LoadScene("FindtheCat7-1");
+                }
+                else
+                {
+                    Debug.Log("아쉽지만 고양이가 여기에는 없어요:(");
+                    find();
+                }
+                break;
+            case FindtheCatBTNType.next:
+                Debug.Log("다음페이지로 넘어가기");
+                SceneManager.LoadScene("FindtheCat8");
                 break;
 
         }
@@ -98,7 +104,7 @@ public class FindtheCatBtnType : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetButtonDown("Fire1")) trial++;
+        //if (Input.GetButtonDown("Fire1")) trial++;
     }
 
 }
