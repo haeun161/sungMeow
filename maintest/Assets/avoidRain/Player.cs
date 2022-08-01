@@ -50,19 +50,19 @@ public class Player : MonoBehaviour
         //Debug.Log("À§Ä¡:" + transform.position);
         if (dir == "up" && (myPos.y<=54.53))
         {
-            transform.Translate(Vector3.up*0.3f);
+            transform.Translate(Vector3.up*0.4f);
         }
         else if (dir == "left" && (myPos.x >= -21))
         {
-            transform.Translate(Vector3.left * 0.3f);
+            transform.Translate(Vector3.left * 0.4f);
         }
         else if (dir == "down" && (myPos.y >= -49.61))
         {
-            transform.Translate(Vector3.down * 0.3f);
+            transform.Translate(Vector3.down * 0.4f);
         }
         else if (dir=="right" && (myPos.x <= 19))
         {
-            transform.Translate(Vector3.right * 0.3f);
+            transform.Translate(Vector3.right * 0.4f);
         }
     }
 }

@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 84.5}
-  m_SizeDelta: {x: 79, y: 141}
+  m_SizeDelta: {x: 40, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2538843299676010428
 CanvasRenderer:
@@ -103,6 +103,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.31259155, y: -0.8182831}
-  m_Size: {x: 77.75775, y: 141.22745}
+  m_Offset: {x: -0.11465454, y: 0.43318176}
+  m_Size: {x: 40.631348, y: 69.26724}
   m_Direction: 0
