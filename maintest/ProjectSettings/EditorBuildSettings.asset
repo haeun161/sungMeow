@@ -51,10 +51,10 @@ EditorBuildSettings:
     path: Assets/Scenes/FindtheCat/FindtheCat4-1.unity
     guid: 08971fb672a8ff64f904fe3cd9c1bcfc
   - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat4-2.unity
+    path: Assets/Scenes/FindtheCat/FindtheCat4-3.unity
     guid: b41ad5244cbf3c14fb41c1f7517d20d5
   - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat4-3.unity
+    path: Assets/Scenes/FindtheCat/FindtheCat4-2.unity
     guid: 27eb6d3a82ef32647bf3cf0a028c0677
   - enabled: 1
     path: Assets/Scenes/FindtheCat/FindtheCat5.unity
