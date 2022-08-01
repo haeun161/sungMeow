@@ -27,15 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UpAndDown/UpAndDown3.unity
     guid: 562036e972873844f84d7044c59bd26f
   - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat1.unity
-    guid: 52a661ded14ad244b841e8ec2d431dca
-  - enabled: 1
-    path: Assets/Scenes/FindtheCat/FIndtheCat2.unity
-    guid: 7887e68038a9d7243ba494e9d8380f21
-  - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat3.unity
-    guid: 2f013f2b4d22b5c458488acf262cc214
-  - enabled: 1
     path: Assets/Scenes/ChooseMiniGame.unity
     guid: 3150be23c569d7e409f106f4c964389e
   - enabled: 1
@@ -48,33 +39,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Matching/Matching3.unity
     guid: 76943fb78eeab13488f9e096dd5e2f96
   - enabled: 1
-    path: 
-    guid: 7963dbeb15bfb9d4fbf0766cc8c5bdf3
+    path: Assets/Scenes/FindtheCat/FindtheCat1.unity
+    guid: 52a661ded14ad244b841e8ec2d431dca
   - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat7-2.unity
-    guid: b12b1a8be2dd2b14aae3dab37a78a35a
+    path: Assets/Scenes/FindtheCat/FIndtheCat2.unity
+    guid: 7887e68038a9d7243ba494e9d8380f21
   - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat6-1.unity
-    guid: 34879a145d122244cbd698ea51b5adbc
-  - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat5-2.unity
-    guid: 5ce0e2444076ef149b706f62c298321f
-  - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat6-2.unity
-    guid: 32652cc98c291e64a93f5a6aa3563a94
-  - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat7-1.unity
-    guid: b9f34cdc628fb6347bfd1fd18d6604d8
+    path: Assets/Scenes/FindtheCat/FindtheCat3.unity
+    guid: 2f013f2b4d22b5c458488acf262cc214
   - enabled: 1
     path: Assets/Scenes/FindtheCat/FindtheCat4-1.unity
     guid: 08971fb672a8ff64f904fe3cd9c1bcfc
   - enabled: 1
     path: Assets/Scenes/FindtheCat/FindtheCat4-2.unity
-    guid: 27eb6d3a82ef32647bf3cf0a028c0677
-  - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat4-3.unity
     guid: b41ad5244cbf3c14fb41c1f7517d20d5
   - enabled: 1
+    path: Assets/Scenes/FindtheCat/FindtheCat4-3.unity
+    guid: 27eb6d3a82ef32647bf3cf0a028c0677
+  - enabled: 1
+    path: Assets/Scenes/FindtheCat/FindtheCat5.unity
+    guid: eb2081b31d4767948ad407b993949f45
+  - enabled: 1
+    path: Assets/Scenes/FindtheCat/FindtheCat6.unity
+    guid: 8889f5441f28f0b4baeed40ad752a93f
+  - enabled: 1
+    path: Assets/Scenes/FindtheCat/FindtheCat7.unity
+    guid: 34879a145d122244cbd698ea51b5adbc
+  - enabled: 1
     path: Assets/Scenes/FindtheCat/FindtheCat8.unity
+    guid: b12b1a8be2dd2b14aae3dab37a78a35a
+  - enabled: 1
+    path: Assets/Scenes/FindtheCat/FindtheCat9.unity
     guid: 320c78b6bc1a7ef489cb19e6ded02c3d
+  - enabled: 1
+    path: Assets/Scenes/FindtheCat/FindtheCat10.unity
+    guid: 217f05229f35b7a44ab5bc5f62da69c8
   m_configObjects: {}

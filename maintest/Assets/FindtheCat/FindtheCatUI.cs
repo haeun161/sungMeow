@@ -9,7 +9,13 @@ public enum FindtheCatBTNType
     TreeButton,
     RoofButton,
     WallButton,
-    next
+    sceneChange1,
+    sceneChange2,
+    sceneChange3,
+    sceneChange4,
+    prize,
+    restart,
+    menu
 }
 public class FindtheCatUI : MonoBehaviour
 {
