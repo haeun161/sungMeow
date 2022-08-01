@@ -75,6 +75,7 @@
     <Compile Include="Assets\FindtheCat\FindtheCatUI.cs" />
     <Compile Include="Assets\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
+    <Compile Include="Assets\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -364,6 +364,7 @@
 "Assets/ChooseMiniGame/ChooseMiniGameUI.cs"
 "Assets/FindtheCat/FindtheCatBtnType.cs"
 "Assets/FindtheCat/FindtheCatUI.cs"
+"Assets/Inventory.cs"
 "Assets/MainUI.cs"
 "Assets/Matching/Change2.cs"
 "Assets/Matching/MatchingBtnType.cs"
