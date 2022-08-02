@@ -5,6 +5,7 @@ using UnityEngine;
 public enum BTNType
 {
     Home,
+    Main,
     GoMiniGame,
     GoAR
 }

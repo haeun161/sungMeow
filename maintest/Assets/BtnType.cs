@@ -10,8 +10,12 @@ public class BtnType : MonoBehaviour
         switch (currentType)
         {
             case BTNType.Home:
-                Debug.Log("홈으로 이동");
-                SceneManager.LoadScene("Home");
+                Debug.Log("인벤토리로 이동");
+                SceneManager.LoadScene("Inventory");
+                break;
+            case BTNType.Main:
+                Debug.Log("메인홈으로 이동");
+                SceneManager.LoadScene("Main");
                 break;
             case BTNType.GoMiniGame:
                 Debug.Log("미니게임하기");

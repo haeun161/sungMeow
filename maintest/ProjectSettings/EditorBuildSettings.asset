@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/UpAndDown/UpAndDown2.unity
@@ -66,12 +66,12 @@ EditorBuildSettings:
     path: Assets/Scenes/FindtheCat/FindtheCat7.unity
     guid: 34879a145d122244cbd698ea51b5adbc
   - enabled: 1
-    path: Assets/Scenes/FindtheCat/FindtheCat8.unity
-    guid: b12b1a8be2dd2b14aae3dab37a78a35a
-  - enabled: 1
     path: Assets/Scenes/FindtheCat/FindtheCat9.unity
     guid: 320c78b6bc1a7ef489cb19e6ded02c3d
   - enabled: 1
     path: Assets/Scenes/FindtheCat/FindtheCat10.unity
     guid: 217f05229f35b7a44ab5bc5f62da69c8
+  - enabled: 1
+    path: Assets/Scenes/Inventory.unity
+    guid: 2c499d8e36dfc4848a6c7824f75350d9
   m_configObjects: {}
