@@ -13,6 +13,7 @@ public class UpAndDownBtnType : MonoBehaviour
     static int answer;
     static int please = 0;
     public static int count = 3;
+    public static int updown = 0;
     //이미지 띄우기용
 
     void play()
@@ -22,6 +23,7 @@ public class UpAndDownBtnType : MonoBehaviour
         {
             if (answer > user)
             {
+                updown = 1;
                 Debug.Log("Up");
                 user = 0;
                 please = 0;
@@ -33,6 +35,7 @@ public class UpAndDownBtnType : MonoBehaviour
             }
             else if (answer < user)
             {
+                updown = -1;
                 Debug.Log("Down");
                 user = 0;
                 please = 0;

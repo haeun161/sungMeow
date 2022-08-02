@@ -375,6 +375,8 @@
 "Assets/UpAndDown/TryImg1.cs"
 "Assets/UpAndDown/UpAndDownBtnType.cs"
 "Assets/UpAndDown/UpAndDownUI.cs"
+"Assets/UpAndDown/UpDownimg.cs"
+"Assets/UpAndDown/Upimg.cs"
 -langversion:9.0
 
 /deterministic

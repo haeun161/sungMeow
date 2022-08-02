@@ -73,13 +73,15 @@
     <Compile Include="Assets\avoidRain\avoidRainBtnType.cs" />
     <Compile Include="Assets\UpAndDown\UpAndDownUI.cs" />
     <Compile Include="Assets\UpAndDown\UpAndDownBtnType.cs" />
+    <Compile Include="Assets\UpAndDown\TryImg1.cs" />
     <Compile Include="Assets\Matching\MatchingImage.cs" />
     <Compile Include="Assets\Matching\MatchingBtnType.cs" />
     <Compile Include="Assets\FindtheCat\FindtheCatUI.cs" />
     <Compile Include="Assets\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
     <Compile Include="Assets\Inventory.cs" />
-    <Compile Include="Assets\UpAndDown\TryImg1.cs" />
+    <Compile Include="Assets\UpAndDown\Upimg.cs" />
+    <Compile Include="Assets\UpAndDown\UpDownimg.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
