@@ -67,6 +67,7 @@
     <Compile Include="Assets\CameraResolution.cs" />
     <Compile Include="Assets\ChooseMiniGame\ChooseMiniGameUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
+    <Compile Include="Assets\avoidRain\RewardScript.cs" />
     <Compile Include="Assets\avoidRain\Player.cs" />
     <Compile Include="Assets\avoidRain\avoidRainBtnType.cs" />
     <Compile Include="Assets\UpAndDown\UpAndDownUI.cs" />
@@ -76,7 +77,6 @@
     <Compile Include="Assets\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
     <Compile Include="Assets\Inventory.cs" />
-    <Compile Include="Assets\avoidRain\RewardScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

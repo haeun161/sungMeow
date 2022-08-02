@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject raindropPrefeb;
     public Text uiTime;
-    public static string strTime;
+    public static string strTime = "0";
     //public GameObject uiStartGameObject;
     // Start is called before the first frame update
 
