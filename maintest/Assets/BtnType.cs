@@ -11,6 +11,7 @@ public class BtnType : MonoBehaviour
         {
             case BTNType.Home:
                 Debug.Log("홈으로 이동");
+                SceneManager.LoadScene("Home");
                 break;
             case BTNType.GoMiniGame:
                 Debug.Log("미니게임하기");
