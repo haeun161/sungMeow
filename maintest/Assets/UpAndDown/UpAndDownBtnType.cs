@@ -12,7 +12,7 @@ public class UpAndDownBtnType : MonoBehaviour
     static int user = 0;
     static int answer;
     static int please = 0;
-    static int count = 3;
+    public static int count = 3;
     //이미지 띄우기용
 
     void play()
