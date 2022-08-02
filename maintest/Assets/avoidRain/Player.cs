@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     }
     void changeScene()
     {
-        SceneManager.LoadScene("avoidRain2");
+        SceneManager.LoadScene("avoidRain4");
     }
     // Start is called before the first frame update
     void Start()
