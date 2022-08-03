@@ -317,7 +317,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398284850}
-  m_Text: 0 point
+  m_Text: 80 point
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -709,7 +709,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543768534}
-  m_Text: "0 \uC2DC\uB3C4"
+  m_Text: "\uC2DC\uB3C4 0"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1

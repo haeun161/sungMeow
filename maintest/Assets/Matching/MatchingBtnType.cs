@@ -12,7 +12,7 @@ public class MatchingBtnType : MonoBehaviour
         {
             case MatchingBTNType.startBtn:
                 Debug.Log("Ω√¿€1");
-                SceneManager.LoadScene("Matching3");
+                SceneManager.LoadScene("Matching4");
                 break;
         }
     }

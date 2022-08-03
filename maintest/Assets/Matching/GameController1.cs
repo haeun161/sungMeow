@@ -62,7 +62,7 @@ public class GameController1 : MonoBehaviour
     private MatchingImage firstOpen;
     private MatchingImage secondOpen;
 
-    private int score = 0;
+    private int score = 80;
     private int attempts = 0;
 
     [SerializeField] private TextMesh scoreText;
@@ -72,11 +72,11 @@ public class GameController1 : MonoBehaviour
     {
         get { return secondOpen == null; }
     }
-    public void imageOpened(MatchingImage starObject)
+    public void imageOpened(MatchingImage startObject)
     {
         if(firstOpen == null)
         {
-            firstOpen = starObject;
+            firstOpen = startObject;
         }
         else
         {
@@ -88,17 +88,19 @@ public class GameController1 : MonoBehaviour
     {
         if(firstOpen.spriteId == secondOpen.spriteId) //Compare the two Objects 
         {
-            score++;
+            score = score + 5;
             scoreText.text = score + "point";
         }
         else
         {
             yield return new WaitForSeconds(0.5f); //Start timer
+            score = score -5;
+            scoreText.text = score + "point";
             firstOpen.Close();
             secondOpen.Close();
         }
         attempts++;
-        attemptsText.text = "Attempts: " + attempts;
+        attemptsText.text = "½Ãµµ: " + attempts;
 
         firstOpen = null;
         secondOpen = null;
