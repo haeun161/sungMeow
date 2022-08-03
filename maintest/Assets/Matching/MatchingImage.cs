@@ -5,12 +5,13 @@ using UnityEngine;
 public class MatchingImage : MonoBehaviour
 {
     [SerializeField] private GameObject image_unknown;
-
+    [SerializeField] private GameController1 gameController;
     public void OnMouseDown()
     {
-        if(image_unknown.activeSelf)
+        if(image_unknown.activeSelf && gameController.canOpen)
         {
             image_unknown.SetActive(false);
+            gameController.imageOpened(this);
         }
     }
 
@@ -20,9 +21,14 @@ public class MatchingImage : MonoBehaviour
         get { return _spriteId; }
     }
 
-    public void ChangeSprite(int id,Sprite image)
+    public void ChangeSprite(int id, Sprite image)
     {
         _spriteId = id;
         GetComponent<SpriteRenderer>().sprite = image;
+        //Gets the sprite renderer component to change the sprite
+    }
+    public void Close()
+    {
+        image_unknown.SetActive(true); //hide Image
     }
 }

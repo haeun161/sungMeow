@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameController1: MonoBehaviour
+public class GameController1 : MonoBehaviour
 {
-    public const int columns = 4;
-    public const int rows = 3;
+    public const int columns = 3;
+    public const int rows = 4;
 
     public const float Xspace = 3.4f;
-    public const float Yspace = 0f;
+    public const float Yspace = 3.5f;
 
     [SerializeField] private MatchingImage startObject;
     [SerializeField] private Sprite[] images;
@@ -51,11 +52,59 @@ public class GameController1: MonoBehaviour
                 int id = locations[index];
                 gameImage.ChangeSprite(id, images[id]);
 
-                float positionX = (Xspace * j) + startPosition.x;
-                float positionY = (Xspace * j) + startPosition.y;
+                float positionX = (Xspace * i) + startPosition.x;
+                float positionY = (Yspace * j) + startPosition.y;
 
                 gameImage.transform.position = new Vector3(positionX, positionY, startPosition.z);
             }
         }
+    }
+    private MatchingImage firstOpen;
+    private MatchingImage secondOpen;
+
+    private int score = 0;
+    private int attempts = 0;
+
+    [SerializeField] private TextMesh scoreText;
+    [SerializeField] private TextMesh attemptsText;
+
+    public bool canOpen
+    {
+        get { return secondOpen == null; }
+    }
+    public void imageOpened(MatchingImage starObject)
+    {
+        if(firstOpen == null)
+        {
+            firstOpen = starObject;
+        }
+        else
+        {
+            secondOpen = startObject;
+            StartCoroutine(CheckGuessed());
+        }
+    }
+    private IEnumerator CheckGuessed()
+    {
+        if(firstOpen.spriteId == secondOpen.spriteId) //Compare the two Objects 
+        {
+            score++;
+            scoreText.text = score + "point";
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.5f); //Start timer
+            firstOpen.Close();
+            secondOpen.Close();
+        }
+        attempts++;
+        attemptsText.text = "Attempts: " + attempts;
+
+        firstOpen = null;
+        secondOpen = null;
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene("Matching4");
     }
 }
