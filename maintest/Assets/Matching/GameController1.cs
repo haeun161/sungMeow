@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class GameController1 : MonoBehaviour
 {
     public static int score = 80;
@@ -33,7 +33,7 @@ public class GameController1 : MonoBehaviour
     {
         int[] locations = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
         locations = Randomiser(locations);
-
+        score = 80;
         Vector3 startPosition = startObject.transform.position;
 
         for (int i = 0; i < columns; i++)
@@ -67,8 +67,8 @@ public class GameController1 : MonoBehaviour
     //public static int score = 80;
     private int attempts = 0;
 
-    [SerializeField] private TextMesh scoreText;
-    [SerializeField] private TextMesh attemptsText;
+    [SerializeField] private TextMeshPro scoreText;
+    [SerializeField] private TextMeshPro attemptsText;
 
     public bool canOpen
     {
@@ -88,6 +88,7 @@ public class GameController1 : MonoBehaviour
     }
     private IEnumerator CheckGuessed()
     {
+        
         if(firstOpen.spriteId == secondOpen.spriteId) //Compare the two Objects 
         {
             score = score + 5;
@@ -97,18 +98,19 @@ public class GameController1 : MonoBehaviour
             if (correctscore == 6)
             {
                 SceneManager.LoadScene("Matching5");
+                correctscore = 0;
             }
         }
         else
         {
             yield return new WaitForSeconds(0.5f); //Start timer
-            score = score -5;
+            score = score - 5;
             scoreText.text = score + "point";
             firstOpen.Close();
             secondOpen.Close();
         }
         attempts++;
-        attemptsText.text = "½Ãµµ: " + attempts;
+        attemptsText.text =  attempts + "TRY";
 
         firstOpen = null;
         secondOpen = null;

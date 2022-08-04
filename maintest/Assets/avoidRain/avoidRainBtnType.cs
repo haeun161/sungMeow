@@ -33,7 +33,7 @@ public class avoidRainBtnType : MonoBehaviour
                 Debug.Log("¾Æ·¡");
                 break;
             case avoidRainBTNType.menu:
-                SceneManager.LoadScene("Main");
+                SceneManager.LoadScene("ChooseMiniGame");
                 break;
             case avoidRainBTNType.retry:
                 SceneManager.LoadScene("avoidRain2");

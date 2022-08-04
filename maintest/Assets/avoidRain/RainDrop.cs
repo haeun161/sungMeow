@@ -13,7 +13,7 @@ public class RainDrop : MonoBehaviour
         targetPos = GameObject.Find("player").transform.position;
         myPos = transform.position;
 
-        newPos = (targetPos - myPos) * 0.003f;
+        newPos = (targetPos - myPos) * 0.006f;
 
         Destroy(gameObject,50f);
     }

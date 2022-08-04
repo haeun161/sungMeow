@@ -22,16 +22,16 @@ public class UpDownimg : MonoBehaviour
         {
             origin = up.transform.position;
             up.SetActive(true);
-            up.transform.Translate(Vector3.up * 0.1f);
-            Invoke("resetAnimUp", 0.5f);
+            up.transform.Translate(Vector3.up * 0.3f);
+            Invoke("resetAnimUp", 1f);
 
         }
         else if((UpAndDownBtnType.updown == -1) && (UpAndDownBtnType.count > 0))
             {
                 origin = down.transform.position;
                 down.SetActive(true);
-                down.transform.Translate(Vector3.down * 0.1f);
-                Invoke("resetAnimDown", 0.5f);
+                down.transform.Translate(Vector3.down * 0.3f);
+                Invoke("resetAnimDown", 1f);
 
             }
         else if ((UpAndDownBtnType.updown == 2) && (UpAndDownBtnType.count > 0))
