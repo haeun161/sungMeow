@@ -18,5 +18,6 @@ public class RewardScript : MonoBehaviour
     void Update()
     {
         rewardText.text = "성냥이가 크리스탈 " + GameController.strTime + "개를 선물했다냥!";
+        
     }
 }

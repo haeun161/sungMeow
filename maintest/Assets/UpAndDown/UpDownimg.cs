@@ -1,39 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UpDownimg : MonoBehaviour
 {
-    public GameObject up,down;
+    public GameObject up,down,correct;
     Vector3 dir, origin;
     // Start is called before the first frame update
     void Start()
     {
         up.SetActive(false);
-        down.SetActive(false);  
+        down.SetActive(false);
+        correct.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (UpAndDownBtnType.updown == 1)
+        if ((UpAndDownBtnType.updown == 1) && (UpAndDownBtnType.count>0))
         {
             origin = up.transform.position;
-            Debug.Log("up나타나야..");
             up.SetActive(true);
             up.transform.Translate(Vector3.up * 0.1f);
             Invoke("resetAnimUp", 0.5f);
 
         }
-        else if(UpAndDownBtnType.updown == -1)
+        else if((UpAndDownBtnType.updown == -1) && (UpAndDownBtnType.count > 0))
             {
                 origin = down.transform.position;
-                Debug.Log("down나타나야..");
                 down.SetActive(true);
                 down.transform.Translate(Vector3.down * 0.1f);
                 Invoke("resetAnimDown", 0.5f);
 
             }
+        else if ((UpAndDownBtnType.updown == 2) && (UpAndDownBtnType.count > 0))
+        {
+            origin = correct.transform.position;
+            correct.SetActive(true);
+            Invoke("resetAnimCorrect", 1f);
+
+        }
+        else if ( UpAndDownBtnType.count == 0)
+        {
+            Debug.Log("실~패!");
+            SceneManager.LoadScene("UpAndDown4");
+        }
     }
     public void resetAnimUp()
     {
@@ -47,4 +59,11 @@ public class UpDownimg : MonoBehaviour
         down.transform.position = origin;
         UpAndDownBtnType.updown = 0;
     }
+    public void resetAnimCorrect()
+    {
+   
+        correct.SetActive(false);
+        UpAndDownBtnType.updown = 0;
+    }
+
 }
