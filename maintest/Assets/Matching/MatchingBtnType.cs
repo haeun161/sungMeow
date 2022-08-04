@@ -14,6 +14,12 @@ public class MatchingBtnType : MonoBehaviour
                 Debug.Log("Ω√¿€1");
                 SceneManager.LoadScene("Matching4");
                 break;
+            case MatchingBTNType.menu:
+                SceneManager.LoadScene("ChooseMiniGame");
+                break;
+            case MatchingBTNType.retry:
+                SceneManager.LoadScene("Matching2");
+                break;
         }
     }
 }

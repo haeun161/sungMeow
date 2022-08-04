@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameController1 : MonoBehaviour
 {
+    public static int score = 80;
+    public static int correctscore = 0;
     public const int columns = 3;
     public const int rows = 4;
 
@@ -62,7 +64,7 @@ public class GameController1 : MonoBehaviour
     private MatchingImage firstOpen;
     private MatchingImage secondOpen;
 
-    private int score = 80;
+    //public static int score = 80;
     private int attempts = 0;
 
     [SerializeField] private TextMesh scoreText;
@@ -89,7 +91,13 @@ public class GameController1 : MonoBehaviour
         if(firstOpen.spriteId == secondOpen.spriteId) //Compare the two Objects 
         {
             score = score + 5;
+            correctscore++;
             scoreText.text = score + "point";
+            
+            if (correctscore == 6)
+            {
+                SceneManager.LoadScene("Matching5");
+            }
         }
         else
         {

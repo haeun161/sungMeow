@@ -370,6 +370,7 @@
 "Assets/Matching/MatchingBtnType.cs"
 "Assets/Matching/MatchingImage.cs"
 "Assets/Matching/MatchingUI.cs"
+"Assets/Matching/scorescript.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/EnvMapAnimator.cs"
 "Assets/UpAndDown/Change1.cs"
 "Assets/UpAndDown/RewardUpAndDown.cs"

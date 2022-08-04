@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public enum MatchingBTNType
 {
-    startBtn
+    startBtn,
+    menu,
+    retry
 }
 public class MatchingUI : MonoBehaviour
 {
