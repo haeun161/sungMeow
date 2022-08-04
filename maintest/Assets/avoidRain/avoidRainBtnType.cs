@@ -32,6 +32,12 @@ public class avoidRainBtnType : MonoBehaviour
             case avoidRainBTNType.down:
                 Debug.Log("¾Æ·¡");
                 break;
+            case avoidRainBTNType.menu:
+                SceneManager.LoadScene("Main");
+                break;
+            case avoidRainBTNType.retry:
+                SceneManager.LoadScene("avoidRain2");
+                break;
 
         }
     }

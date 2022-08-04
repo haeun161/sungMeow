@@ -9,7 +9,9 @@ public enum avoidRainBTNType
     up,
     down,
     right,
-    left
+    left,
+    menu,
+    retry
 
 }
 public class avoidRainUI : MonoBehaviour
