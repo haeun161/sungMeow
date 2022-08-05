@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 9379901}
   - component: {fileID: 9379900}
   - component: {fileID: 9379899}
-  - component: {fileID: 9379898}
+  - component: {fileID: 9379902}
   m_Layer: 5
   m_Name: retry
   m_TagString: Untagged
@@ -163,20 +163,6 @@ RectTransform:
   m_AnchoredPosition: {x: -157, y: -1146}
   m_SizeDelta: {x: 196, y: 196}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9379898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9379896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae78ef865569240459c42f79754a3ffc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentType: 0
-  scoreText: {fileID: 0}
 --- !u!114 &9379899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,16 +207,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9379898}
-        m_TargetAssemblyTypeName: FindtheCatBtnType, Assembly-CSharp
-        m_MethodName: OnBtnClick
-        m_Mode: 1
+      - m_Target: {fileID: 9379902}
+        m_TargetAssemblyTypeName: GoToScene, Assembly-CSharp
+        m_MethodName: GoToScene1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: FindtheCat2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &9379900
@@ -271,6 +257,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9379896}
   m_CullTransparentMesh: 1
+--- !u!114 &9379902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9379896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bec0820a267efe488ca80859ee8cc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &163413085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +1005,7 @@ GameObject:
   - component: {fileID: 1985346239}
   - component: {fileID: 1985346238}
   - component: {fileID: 1985346237}
-  - component: {fileID: 1985346236}
+  - component: {fileID: 1985346240}
   m_Layer: 5
   m_Name: toMenu
   m_TagString: Untagged
@@ -1034,20 +1033,6 @@ RectTransform:
   m_AnchoredPosition: {x: 165, y: -1146}
   m_SizeDelta: {x: 196, y: 196}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1985346236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985346234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae78ef865569240459c42f79754a3ffc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentType: 11
-  scoreText: {fileID: 0}
 --- !u!114 &1985346237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,16 +1077,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1985346236}
-        m_TargetAssemblyTypeName: FindtheCatBtnType, Assembly-CSharp
-        m_MethodName: OnBtnClick
-        m_Mode: 1
+      - m_Target: {fileID: 1985346240}
+        m_TargetAssemblyTypeName: GoToScene, Assembly-CSharp
+        m_MethodName: GoToScene1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ChooseMiniGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1985346238
@@ -1142,6 +1127,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985346234}
   m_CullTransparentMesh: 1
+--- !u!114 &1985346240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985346234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bec0820a267efe488ca80859ee8cc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
 --- !u!1 &2010391320
 GameObject:
   m_ObjectHideFlags: 0
