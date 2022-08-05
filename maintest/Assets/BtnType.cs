@@ -23,6 +23,7 @@ public class BtnType : MonoBehaviour
                 break;
             case BTNType.GoAR:
                 Debug.Log("모험떠나기");
+                SceneManager.LoadScene("SampleScene");
                 break;
 
         }

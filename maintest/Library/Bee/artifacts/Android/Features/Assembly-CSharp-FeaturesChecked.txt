@@ -1,1 +1,3 @@
+UnityEngine.WWW
 UnityEngine.Handheld::Vibrate
+UnityEngine.Input::get_location
