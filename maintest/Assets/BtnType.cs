@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class BtnType : MonoBehaviour
 {
     public BTNType currentType;
+
     public void OnBtnClick()
     {
         switch (currentType)
@@ -23,7 +24,7 @@ public class BtnType : MonoBehaviour
                 break;
             case BTNType.GoAR:
                 Debug.Log("모험떠나기");
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("Map");
                 break;
 
         }

@@ -31,9 +31,9 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('C:/Users/handa/My project (6)/user.keystore')
+            storeFile file('C:/Users/haeun/Documents/SungMeow22/sungMeow/maintest/user.keystore')
             storePassword 'pw1234'
-            keyAlias 'handakyeng'
+            keyAlias 'pw'
             keyPassword 'pw1234'
         }
     }

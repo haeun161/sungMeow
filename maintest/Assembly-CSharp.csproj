@@ -58,20 +58,26 @@
   <ItemGroup>
     <Compile Include="Assets\UpAndDown\RewardUpAndDown.cs" />
     <Compile Include="Assets\avoidRain\avoidRainUI.cs" />
+    <Compile Include="Assets\GPSManager.cs" />
+    <Compile Include="Assets\GpsDistance.cs" />
+    <Compile Include="Assets\HomeBtn.cs" />
     <Compile Include="Assets\avoidRain\GameController.cs" />
     <Compile Include="Assets\Matching\MatchingUI.cs" />
     <Compile Include="Assets\avoidRain\RainDrop.cs" />
     <Compile Include="Assets\ChooseMiniGame\ChooseMiniGameBtnType.cs" />
+    <Compile Include="Assets\Loading.cs" />
     <Compile Include="Assets\BtnType.cs" />
     <Compile Include="Assets\Matching\GameController1.cs" />
     <Compile Include="Assets\UpAndDown\Change1.cs" />
     <Compile Include="Assets\Matching\Change2.cs" />
+    <Compile Include="Assets\GoogleMap.cs" />
     <Compile Include="Assets\CameraResolution.cs" />
     <Compile Include="Assets\ChooseMiniGame\ChooseMiniGameUI.cs" />
     <Compile Include="Assets\UpAndDown\UpAndDownScript.cs" />
     <Compile Include="Assets\UpAndDown\UpDownimg.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\avoidRain\RewardScript.cs" />
+    <Compile Include="Assets\GPS.cs" />
     <Compile Include="Assets\avoidRain\Player.cs" />
     <Compile Include="Assets\Matching\scorescript.cs" />
     <Compile Include="Assets\avoidRain\avoidRainBtnType.cs" />
@@ -85,6 +91,7 @@
     <Compile Include="Assets\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
     <Compile Include="Assets\Inventory.cs" />
+    <Compile Include="Assets\GoToScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

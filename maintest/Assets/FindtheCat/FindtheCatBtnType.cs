@@ -2,11 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class FindtheCatBtnType : MonoBehaviour
 {
+    
+    private const string V = "집사는 크리스탈 15개를 획득하였다!";
     public FindtheCatBTNType currentType;
+    public TextMeshProUGUI scoreText;
+    int score = 0;
+
+
+    public static bool prize { get; internal set; }
+
     //private int trial = 0;
+    public void GoToScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
 
     public void OnBtnClick()
     {
@@ -14,74 +28,39 @@ public class FindtheCatBtnType : MonoBehaviour
 
         //for(int trial=0; trial<3;trial++)
         switch (currentType)
-        {
-            case FindtheCatBTNType.start1:
-                Debug.Log("게임 시작");
-                SceneManager.LoadScene("FindtheCat2");
-                break;
-
-            case FindtheCatBTNType.start2:                
-                Debug.Log("게임을 시작합니다!");
-                SceneManager.LoadScene("FindtheCat3");
-                break;
-
-            case FindtheCatBTNType.TreeButton:
-                SceneManager.LoadScene("FindtheCat4-1");
-                break;
-
-            case FindtheCatBTNType.RoofButton:
-                SceneManager.LoadScene("FindtheCat4-2");
-                break;
-
-            case FindtheCatBTNType.WallButton:
-                SceneManager.LoadScene("FindtheCat4-3");
-                break;
-
+        {                
             case FindtheCatBTNType.sceneChange1:
-                if(result==0)
-                    SceneManager.LoadScene("FindtheCat5");
+                if (result == 0)
+                {
+                    GoToScene("FindtheCat5");
+                    score = 15;
+                }                   
+
                 else
-                    SceneManager.LoadScene("FindtheCat8");
+                    GoToScene("FindtheCat8");
                 break;
 
             case FindtheCatBTNType.sceneChange2:
                 if (result == 1)
-                    SceneManager.LoadScene("FindtheCat6");
+                {
+                    GoToScene("FindtheCat6");
+                    score = 15;
+                }                    
                 else
-                    SceneManager.LoadScene("FindtheCat8");
+                    GoToScene("FindtheCat8");
                 break;
 
             case FindtheCatBTNType.sceneChange3:
                 if (result == 2)
-                    SceneManager.LoadScene("FindtheCat7");
+                {
+                    GoToScene("FindtheCat7");
+                    score = 15;
+                }
                 else
-                    SceneManager.LoadScene("FindtheCat8");
-                break;
-
-            case FindtheCatBTNType.prize:
-                Debug.Log("크리스탈 획득");
-                SceneManager.LoadScene("FindtheCat9");
-                break;
-            case FindtheCatBTNType.restart:
-                Debug.Log("다시하기");
-                SceneManager.LoadScene("FindtheCat2");
-                break;
-            case FindtheCatBTNType.menu:
-                Debug.Log("메뉴로 돌아가기");
-                SceneManager.LoadScene("ChooseMiniGame");
+                    GoToScene("FindtheCat8");
                 break;
         }
-        
-    }
-
-    void Update()
-    {
-        //trialText.text = "시행 횟수 : " + trial.ToString();
-    }
-
-    private void FixedUpdate()
-    {
-        //if (Input.GetButtonDown("Fire1")) trial++;
+        scoreText.text = "성냥이가 크리스탈 " + score + "개를 선물했다냥!";
     }
 
 }
