@@ -7,6 +7,7 @@ public class RainDrop : MonoBehaviour
     Vector3 targetPos;
     Vector3 myPos;
     Vector3 newPos;
+
     // Start is called before the first frame update
     void Start()
     {

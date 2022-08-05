@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 public class GameController1 : MonoBehaviour
 {
-    public static int score = 80;
+    public static int score = 50;
     public static int correctscore = 0;
     public const int columns = 3;
     public const int rows = 4;
@@ -33,7 +33,7 @@ public class GameController1 : MonoBehaviour
     {
         int[] locations = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
         locations = Randomiser(locations);
-        score = 80;
+        score = 50;
         Vector3 startPosition = startObject.transform.position;
 
         for (int i = 0; i < columns; i++)
@@ -105,6 +105,7 @@ public class GameController1 : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f); //Start timer
             score = score - 5;
+
             scoreText.text = score + "point";
             firstOpen.Close();
             secondOpen.Close();

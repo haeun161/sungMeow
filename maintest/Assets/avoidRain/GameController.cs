@@ -22,8 +22,8 @@ public class GameController : MonoBehaviour
 
     void SetTime()
     {
-        sec = sec + 1;
-        uiTime.text = ""+sec;
+        sec += 1;
+        uiTime.text = "" + sec;
         strTime = uiTime.text;
     }
     void MakeRaindrop()

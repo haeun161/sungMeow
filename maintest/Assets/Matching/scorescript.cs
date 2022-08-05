@@ -15,6 +15,9 @@ public class scorescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text  = "성냥이가 크리스탈 " + GameController1.score + "개를 선물했다냥!";
+        if (GameController1.score > 0 )
+            scoreText.text  = "성냥이가 크리스탈 " + GameController1.score + "개를 선물했다냥!";
+        else
+            scoreText.text = "성냥이가 크리스탈 " + 1 + "개를 선물했다냥!";
     }
 }

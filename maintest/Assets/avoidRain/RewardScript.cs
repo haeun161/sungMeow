@@ -17,7 +17,7 @@ public class RewardScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rewardText.text = "성냥이가 크리스탈 " + GameController.strTime + "개를 선물했다냥!";
+        rewardText.text = "성냥이가 크리스탈 " + (int.Parse(GameController.strTime)) * 2 + "개를 선물했다냥!";
         
     }
 }

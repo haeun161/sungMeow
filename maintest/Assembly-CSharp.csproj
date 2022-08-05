@@ -53,9 +53,10 @@
     <UnityVersion>2021.3.5f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\UpAndDown\RewardUpAndDown.cs" />
     <Compile Include="Assets\avoidRain\avoidRainUI.cs" />
     <Compile Include="Assets\avoidRain\GameController.cs" />
     <Compile Include="Assets\Matching\MatchingUI.cs" />
@@ -67,12 +68,14 @@
     <Compile Include="Assets\Matching\Change2.cs" />
     <Compile Include="Assets\CameraResolution.cs" />
     <Compile Include="Assets\ChooseMiniGame\ChooseMiniGameUI.cs" />
-    <Compile Include="Assets\UpAndDown\Upimg.cs" />
+    <Compile Include="Assets\UpAndDown\UpAndDownScript.cs" />
     <Compile Include="Assets\UpAndDown\UpDownimg.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\avoidRain\RewardScript.cs" />
     <Compile Include="Assets\avoidRain\Player.cs" />
+    <Compile Include="Assets\Matching\scorescript.cs" />
     <Compile Include="Assets\avoidRain\avoidRainBtnType.cs" />
+    <Compile Include="Assets\PointMatching.cs" />
     <Compile Include="Assets\UpAndDown\UpAndDownUI.cs" />
     <Compile Include="Assets\UpAndDown\UpAndDownBtnType.cs" />
     <Compile Include="Assets\UpAndDown\TryImg1.cs" />
@@ -352,6 +355,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>

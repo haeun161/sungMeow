@@ -62,11 +62,6 @@ public class FindtheCatBtnType : MonoBehaviour
                 Debug.Log("크리스탈 획득");
                 SceneManager.LoadScene("FindtheCat9");
                 break;
-
-            case FindtheCatBTNType.sceneChange4:
-                Debug.Log("돌아가기, 다시하기 페이지로 이동");
-                SceneManager.LoadScene("FindtheCat10");
-                break;
             case FindtheCatBTNType.restart:
                 Debug.Log("다시하기");
                 SceneManager.LoadScene("FindtheCat2");
