@@ -6,22 +6,8 @@ using TMPro;
 
 public class GoToScene : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-
     public void GoToScene1(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

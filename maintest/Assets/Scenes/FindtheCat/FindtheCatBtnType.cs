@@ -8,7 +8,6 @@ using TMPro;
 public class FindtheCatBtnType : MonoBehaviour
 {
     
-    private const string V = "집사는 크리스탈 15개를 획득하였다!";
     public FindtheCatBTNType currentType;
     public TextMeshProUGUI scoreText;
     int score = 0;
@@ -60,7 +59,15 @@ public class FindtheCatBtnType : MonoBehaviour
                     GoToScene("FindtheCat8");
                 break;
         }
-        scoreText.text = "성냥이가 크리스탈 " + score + "개를 선물했다냥!";
+        
+    }
+
+    void Update()
+    {
+        if (score==0)
+            scoreText.text = "아쉽지만 크리스탈을 못받았습니다...";
+        else
+            scoreText.text = "성냥이가 크리스탈 " + score + "개를 선물했다냥!";
     }
 
 }
