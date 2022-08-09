@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
+    public GameObject gameover;
     string dir;
     public void Press_up()
     {
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     {
         Destroy(collider.gameObject);
         Debug.Log("GAME OVER");
+        gameover.SetActive(true);
         Handheld.Vibrate();
         //나중에 살려야함
         Invoke("changeScene", 0.5f);
@@ -40,7 +42,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameover.SetActive(false);
     }
 
     // Update is called once per frame

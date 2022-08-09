@@ -59,7 +59,6 @@
     <Compile Include="Assets\Scenes\UpAndDown\RewardUpAndDown.cs" />
     <Compile Include="Assets\Scenes\avoidRain\avoidRainUI.cs" />
     <Compile Include="Assets\Map\GPSManager.cs" />
-    <Compile Include="Assets\img\GpsDistance.cs" />
     <Compile Include="Assets\HomeBtn.cs" />
     <Compile Include="Assets\Scenes\avoidRain\GameController.cs" />
     <Compile Include="Assets\Scenes\Matching\MatchingUI.cs" />

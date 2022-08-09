@@ -359,7 +359,6 @@
 "Assets/ChooseMiniGame/ChooseMiniGameUI.cs"
 "Assets/GoToScene.cs"
 "Assets/HomeBtn.cs"
-"Assets/img/GpsDistance.cs"
 "Assets/Inventory.cs"
 "Assets/MainUI.cs"
 "Assets/Map/GoogleMap.cs"

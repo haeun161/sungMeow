@@ -10,7 +10,7 @@ public class UpAndDownBtnType : MonoBehaviour
 
     public UpAndDownBTNType currentType;
     static int user = 0;
-    static int answer;
+    public static int answer;
     static int please = 0;
     public static int count = 5;
     public static int updown = 0;

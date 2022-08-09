@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UpDownimg : MonoBehaviour
 {
-    public GameObject up,down,correct;
+    public GameObject up,down,correct, nocorrect;
     Vector3 dir, origin;
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,7 @@ public class UpDownimg : MonoBehaviour
         up.SetActive(false);
         down.SetActive(false);
         correct.SetActive(false);
+        nocorrect.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,7 +23,7 @@ public class UpDownimg : MonoBehaviour
         {
             origin = up.transform.position;
             up.SetActive(true);
-            up.transform.Translate(Vector3.up * 0.3f);
+            up.transform.Translate(Vector3.up * 0.6f);
             Invoke("resetAnimUp", 1f);
 
         }
@@ -30,7 +31,7 @@ public class UpDownimg : MonoBehaviour
             {
                 origin = down.transform.position;
                 down.SetActive(true);
-                down.transform.Translate(Vector3.down * 0.3f);
+                down.transform.Translate(Vector3.down * 0.6f);
                 Invoke("resetAnimDown", 1f);
 
             }
@@ -44,6 +45,7 @@ public class UpDownimg : MonoBehaviour
         else if ( UpAndDownBtnType.count == 0)
         {
             Debug.Log("½Ç~ÆÐ!");
+            nocorrect.SetActive(true);
             SceneManager.LoadScene("UpAndDown4");
         }
     }
