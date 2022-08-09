@@ -12,6 +12,8 @@ public class GPS : MonoBehaviour
     string url;
     public WaitForSeconds second;
     public Text debugText;
+    public GameObject frame;
+
 
     LocationInfo myGPSLocation;
     //float fiveSecondCounter = 0.0f;
@@ -38,6 +40,11 @@ public class GPS : MonoBehaviour
     public mapType mapSelected;
     public int scale;
 
+
+    private void Start()
+    {
+        frame.SetActive(false);
+    }
 
     private void Update()
     {
@@ -96,9 +103,16 @@ public class GPS : MonoBehaviour
             url = "https://maps.googleapis.com/maps/api/staticmap?center=" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude +
             "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale + "&maptype=" + mapSelected +
             "&markers=color:red%7Cllabel:D%7C" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + //내위치
-            
-            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.556182,126.937071"  + //보드게임카페 //밥그릇
-            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FQVT2pqX.png%7C37.556533,126.936731" + //풋락커 //쥐
+
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.59257,127.021065" + //현위치 근처로 랜덤 추가
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.591175,127.022247" + //벽돌 //밥그릇            
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591057,127.021561" + //종합안내도 //쥐
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591595,127.022446" + //성신역사관 //쥐
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FnXCYIqh.png%2FQVT2pqX.png%7C37.591972,127.021332" + //종합상황실 //발자국
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FnXCYIqh.png%2FQVT2pqX.png%7C37.591278,127.020851" + //대나무숲 //발자국
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F7oCkbvi.png%2FQVT2pqX.png%7C37.590813,127.021484" + //도서관 그림 //고양이밥
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FfBOChlf.png%2FQVT2pqX.png%7C37.591274,127.020851" + //성신여대 정문 //장난감
+
             "&key=AIzaSyATpBKPhD1nbjcXsW0cR-i6EzJTf8xkdpM";
 
             //"&markers=size:tiny%7color:red%7Clabel:S%7C37.5912657864989,127.02206239287148" + //학교
@@ -111,8 +125,8 @@ public class GPS : MonoBehaviour
             WWW www = new WWW(url);
             yield return www;
             img.texture = www.texture;
-            debugText.text = getUpdatedGPSstring(37.556182, 126.937071); //에뛰드
-            debugText.text += getUpdatedGPSstring(37.556533, 126.93673); // 보드게임카페
+            debugText.text = getUpdatedGPSstring(37.59257, 127.021065); //현위치
+            //debugText.text += getUpdatedGPSstring(37.556533, 126.93673); // 보드게임카페
             //img.SetNativeSize();
 
         }
@@ -135,13 +149,15 @@ public class GPS : MonoBehaviour
         DistanceToMeter = distance(MyLatitude, MyLongtitude, TargetLatitude, TargetLongtitude, DistUnit.meter);
         //DistanceToMeter = distance (37.507775, 127.039675, 37.507660, 127.039530, "meter"); // 20미터 이내 거리체크
 
-        if (DistanceToMeter < 45)
+        if (DistanceToMeter < 5)
         {// 건물의 높낮이 등 환경적인 요소로 인해 오차가 발생 할 수 있음.
             storeRange = "근처 O";
+            frame.SetActive(true);
         }
         else
         {
             storeRange = "근처 X";
+            frame.SetActive(false);
         }
 
         return "\n현재위치 :\n" +

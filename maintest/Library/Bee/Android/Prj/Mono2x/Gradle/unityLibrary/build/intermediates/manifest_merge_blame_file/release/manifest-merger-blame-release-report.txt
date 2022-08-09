@@ -73,15 +73,15 @@
 40            android:name="com.unity3d.player.UnityPlayerActivity"
 40-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:15-68
 41            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-41-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:182-363
+41-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:180-361
 42            android:hardwareAccelerated="false"
-42-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:399-434
+42-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:397-432
 43            android:launchMode="singleTask"
-43-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:150-181
+43-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:148-179
 44            android:resizeableActivity="false"
-44-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:364-398
-45            android:screenOrientation="fullSensor"
-45-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-149
+44-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:362-396
+45            android:screenOrientation="portrait"
+45-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-147
 46            android:theme="@style/UnityThemeSelector" >
 46-->C:\Users\haeun\Documents\SungMeow22\sungMeow\maintest\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-110
 47            <intent-filter>

@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+
 
 
 public class FindtheCatBtnType : MonoBehaviour
 {
     
     public FindtheCatBTNType currentType;
-    public TextMeshProUGUI scoreText;
-    int score = 0;
-
-
-    public static bool prize { get; internal set; }
+    
+    
+    public static int score = 0;
 
     //private int trial = 0;
     public void GoToScene(string sceneName)
@@ -33,10 +31,14 @@ public class FindtheCatBtnType : MonoBehaviour
                 {
                     GoToScene("FindtheCat5");
                     score = 15;
-                }                   
+                }
 
                 else
+                {
                     GoToScene("FindtheCat8");
+                    score = 0;
+                }
+                    
                 break;
 
             case FindtheCatBTNType.sceneChange2:
@@ -46,7 +48,10 @@ public class FindtheCatBtnType : MonoBehaviour
                     score = 15;
                 }                    
                 else
+                {
                     GoToScene("FindtheCat8");
+                    score = 0;
+                }
                 break;
 
             case FindtheCatBTNType.sceneChange3:
@@ -56,18 +61,15 @@ public class FindtheCatBtnType : MonoBehaviour
                     score = 15;
                 }
                 else
+                {
                     GoToScene("FindtheCat8");
+                    score = 0;
+                }
                 break;
         }
         
     }
 
-    void Update()
-    {
-        if (score==0)
-            scoreText.text = "아쉽지만 크리스탈을 못받았습니다...";
-        else
-            scoreText.text = "성냥이가 크리스탈 " + score + "개를 선물했다냥!";
-    }
+ 
 
 }

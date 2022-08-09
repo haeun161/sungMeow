@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - ChooseMiniGameBtnType
     - ChooseMiniGameUI
     - FindtheCatBtnType
+    - FindtheCatScore
     - FindtheCatUI
     - GPS
     - GameController
@@ -974,6 +975,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7754}
     - Class: 114
       Script: {instanceID: 7866}
+    - Class: 114
+      Script: {instanceID: 33628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -2386,7 +2389,7 @@ ScriptsOnlyBuild:
     className: DictionaryAsset
   - hash:
       serializedVersion: 2
-      Hash: 2a2d2b14a6473d65996b4a775c0d9bbf
+      Hash: e2d34e43d974491b26c454932c218dfc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GPS
@@ -2794,7 +2797,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseOverMessageListener
   - hash:
       serializedVersion: 2
-      Hash: fdab4fc6b1ff566d6d834ea0bbdbc100
+      Hash: 0ea15b90519b0d19275927813db03a57
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FindtheCatBtnType
@@ -2864,6 +2867,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: d7912c765efb61cb6ee4c7c78f120d21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FindtheCatScore
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
