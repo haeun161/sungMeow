@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\Scenes\UpAndDown\RewardUpAndDown.cs" />
     <Compile Include="Assets\Scenes\avoidRain\avoidRainUI.cs" />
-    <Compile Include="Assets\Map\GPSManager.cs" />
     <Compile Include="Assets\HomeBtn.cs" />
     <Compile Include="Assets\Scenes\avoidRain\GameController.cs" />
     <Compile Include="Assets\Scenes\Matching\MatchingUI.cs" />
@@ -69,7 +68,6 @@
     <Compile Include="Assets\Scenes\Matching\GameController1.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\Change1.cs" />
     <Compile Include="Assets\Scenes\Matching\Change2.cs" />
-    <Compile Include="Assets\Map\GoogleMap.cs" />
     <Compile Include="Assets\CameraResolution.cs" />
     <Compile Include="Assets\ChooseMiniGame\ChooseMiniGameUI.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownScript.cs" />
@@ -84,13 +82,13 @@
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownUI.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownBtnType.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\TryImg1.cs" />
+    <Compile Include="Assets\Scenes\FindtheCat\FindtheCatScore.cs" />
     <Compile Include="Assets\Scenes\Matching\MatchingImage.cs" />
     <Compile Include="Assets\Scenes\Matching\MatchingBtnType.cs" />
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatUI.cs" />
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
     <Compile Include="Assets\Inventory.cs" />
-    <Compile Include="Assets\Scenes\FindtheCat\FindtheCatScore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

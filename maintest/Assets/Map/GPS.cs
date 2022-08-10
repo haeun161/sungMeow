@@ -126,7 +126,13 @@ public class GPS : MonoBehaviour
             yield return www;
             img.texture = www.texture;
             debugText.text = getUpdatedGPSstring(37.59257, 127.021065); //현위치
-            //debugText.text += getUpdatedGPSstring(37.556533, 126.93673); // 보드게임카페
+            debugText.text += getUpdatedGPSstring(37.591175, 127.022247); // 벽돌
+            debugText.text += getUpdatedGPSstring(37.591057, 127.021561); // 종합안내도
+            debugText.text += getUpdatedGPSstring(37.591595, 127.022446); // 성신역사관
+            debugText.text += getUpdatedGPSstring(37.591972, 127.021332); // 종합상황실
+            debugText.text += getUpdatedGPSstring(37.591278, 127.020851); // 대나무 숲
+            debugText.text += getUpdatedGPSstring(37.590813, 127.021484); // 도서관 그림
+            debugText.text += getUpdatedGPSstring(37.591274, 127.020851); // 정신여대 정문 그림
             //img.SetNativeSize();
 
         }
@@ -161,17 +167,13 @@ public class GPS : MonoBehaviour
         }
 
         return "\n현재위치 :\n" +
-        "경도 - " + Math.Round(MyLatitude, 6) + "\n" +
-        "위도 - " + Math.Round(MyLongtitude, 6) +
+        "경도 - " + Math.Round(MyLatitude, 6) + "," + "위도 - " + Math.Round(MyLongtitude, 6) +
 
         "\n\n" + "목표위치 : " + LocationName + "\n" +
-        "경도 - " + TargetLatitude + "\n" +
-        "위도 - " + TargetLongtitude +
+        "경도 - " + TargetLatitude + "," + "위도 - " + TargetLongtitude +
 
-        "\n\n목표와의거리 : \n약 " + DistanceToMeter + "M" + "\n" +
-        "-------------\n\n" +
-
-        storeRange;
+        "\n\n목표와의 거리 : \n약 " + DistanceToMeter + "M" + "\n" +
+         storeRange + "\n-------------\n";
     }
 
 
