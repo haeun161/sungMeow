@@ -170,6 +170,26 @@ public class Web : MonoBehaviour
             }
         }
     }
+    public static IEnumerator getCrystal(string username)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", username);
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/GetCrycstal.php", form))
+        {
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("cryctal: "+www.downloadHandler.text);
+                useritem.realcrystal = int.Parse(www.downloadHandler.text);
+                Debug.Log("crystal" + useritem.realcrystal);
+
+            }
+        }
+    }
 
 }
 

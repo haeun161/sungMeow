@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class useritem : MonoBehaviour
 {
+    public TextMeshProUGUI crystalText;
     public static int[] hasitem = new int[] { 0,0,0,0,0,0,0 };
     public static string[] itemnames = new string[] { "bowl", "fish", "string", "scarf", "ribbon", "pillow", "crown" };
+    public static int[] itemprice = new int[] { 500, 700, 3500, 2000, 1500, 2500, 9999 };
     public GameObject gameObject0, gameObject1, gameObject2, gameObject3, gameObject4, gameObject5, gameObject6;
+    public static int realcrystal;
     // Start is called before the first frame update
     private void Awake()
     {
         Debug.Log(Web.realusername);
+        StartCoroutine(Web.getCrystal(Web.realusername));
         for (int i = 0; i < itemnames.Length; i++)
         {
             StartCoroutine(Web.getUsersItems(Web.realusername, itemnames[i], i));
@@ -31,10 +35,9 @@ public class useritem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < itemnames.Length; i++)
-        {
-            StartCoroutine(Web.getUsersItems(Web.realusername, itemnames[i], i));
-        }
+
+        crystalText.text = realcrystal.ToString();
+ 
         if (hasitem[0] == 1)
         {
             gameObject0.SetActive(false);
