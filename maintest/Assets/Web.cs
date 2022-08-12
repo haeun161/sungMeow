@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 // UnityWebRequest.Get example
 
 // Access a website and use UnityWebRequest.Get to download a page.
@@ -9,6 +9,7 @@ using System.Collections;
 
 public class Web : MonoBehaviour
 {
+    public static string realusername;
     void Start()
     {
         //StartCoroutine(GetDate());
@@ -81,6 +82,22 @@ public class Web : MonoBehaviour
 
                 // MainScript.Instance.UserInfo.SetUsername(www.downloadHandler.text);
                 //MainScript.Instance.UserInfo.SetPassword(password);
+
+                if (www.downloadHandler.text.Contains("wrong password") || www.downloadHandler.text.Contains("Username does not exist."))
+                {
+                    Debug.Log("Try Again");
+                }
+
+                //If we logged in correctly
+                else
+                {
+                    SceneManager.LoadScene("Main");
+                    realusername = username;
+                    //MainScript.Instance.UserProfile.SetActive(true);
+                    //MainScript.Instance.Login.gameObject.SetActive(false);
+                }
+
+
             }
         }
     }
@@ -126,6 +143,31 @@ public class Web : MonoBehaviour
                 //Call callback function to pass results
             }
 
+        }
+    }
+    public static IEnumerator getUsersItems(string username, string itemname, int itemindex)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", username);
+        form.AddField("itemname", itemname);
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/GetUsersItems.php", form))
+        {
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+                
+                if (www.downloadHandler.text.Contains("1"))
+                {
+                    useritem.hasitem[itemindex] = 1;
+                }
+                
+
+            }
         }
     }
 
