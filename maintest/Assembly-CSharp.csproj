@@ -53,7 +53,7 @@
     <UnityVersion>2021.3.5f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\UpAndDown\RewardUpAndDown.cs" />
@@ -71,24 +71,29 @@
     <Compile Include="Assets\CameraResolution.cs" />
     <Compile Include="Assets\ChooseMiniGame\ChooseMiniGameUI.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownScript.cs" />
+    <Compile Include="Assets\UserInfo.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpDownimg.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scenes\avoidRain\RewardScript.cs" />
     <Compile Include="Assets\Map\GPS.cs" />
+    <Compile Include="Assets\Login.cs" />
     <Compile Include="Assets\Scenes\avoidRain\Player.cs" />
     <Compile Include="Assets\Scenes\Matching\scorescript.cs" />
     <Compile Include="Assets\Scenes\avoidRain\avoidRainBtnType.cs" />
     <Compile Include="Assets\GoToScene.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownUI.cs" />
+    <Compile Include="Assets\Web.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownBtnType.cs" />
+    <Compile Include="Assets\Register.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\TryImg1.cs" />
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatScore.cs" />
+    <Compile Include="Assets\MainScript.cs" />
     <Compile Include="Assets\Scenes\Matching\MatchingImage.cs" />
     <Compile Include="Assets\Scenes\Matching\MatchingBtnType.cs" />
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatUI.cs" />
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
-    <Compile Include="Assets\Inventory.cs" />
+    <Compile Include="Assets\Scenes\Inventory\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -359,6 +364,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.5f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
