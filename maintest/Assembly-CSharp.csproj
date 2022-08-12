@@ -93,8 +93,8 @@
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatUI.cs" />
     <Compile Include="Assets\Scenes\FindtheCat\FindtheCatBtnType.cs" />
     <Compile Include="Assets\MainUI.cs" />
-    <Compile Include="Assets\Scenes\Inventory\Inventory.cs" />
     <Compile Include="Assets\Scenes\Inventory\useritem.cs" />
+    <Compile Include="Assets\Scenes\Inventory\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

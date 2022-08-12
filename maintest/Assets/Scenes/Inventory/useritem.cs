@@ -31,6 +31,10 @@ public class useritem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < itemnames.Length; i++)
+        {
+            StartCoroutine(Web.getUsersItems(Web.realusername, itemnames[i], i));
+        }
         if (hasitem[0] == 1)
         {
             gameObject0.SetActive(false);
