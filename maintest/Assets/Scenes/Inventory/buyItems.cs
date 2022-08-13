@@ -41,14 +41,23 @@ public class buyItems : MonoBehaviour
     }
     public void buyCrown()
     {
-        price = -500;
-        itemname = "9999";
+        price = -9999;
+        itemname = "crown";
     }
     public void buysure()
     {
-        StartCoroutine(Web.getCrystal(Web.realusername));
-        StartCoroutine(Web.updateCrystal(Web.realusername,price));
-        StartCoroutine(Web.updateItem(Web.realusername, itemname));
-        SceneManager.LoadScene("inventory");
+
+       if (price*-1 <= useritem.realcrystal)
+        {
+            StartCoroutine(Web.updateCrystal(Web.realusername, price));
+            StartCoroutine(Web.updateItem(Web.realusername, itemname));
+            SceneManager.LoadScene("inventory");
+            price = 0;
+        }
+        else
+        {
+            Debug.Log("크라스탈 부족");
+            Handheld.Vibrate();
+        }
     }
 }
