@@ -49,15 +49,15 @@ public class buyItems : MonoBehaviour
 
        if (price*-1 <= useritem.realcrystal)
         {
-            StartCoroutine(Web.updateCrystal(Web.realusername, price));
-            StartCoroutine(Web.updateItem(Web.realusername, itemname));
+            StartCoroutine(Web.updateCrystal(MainScript.Instance.UserInfo.UserName, price));
+            StartCoroutine(Web.updateItem(MainScript.Instance.UserInfo.UserName, itemname));
             SceneManager.LoadScene("inventory");
             price = 0;
         }
         else
         {
             Debug.Log("크라스탈 부족");
-            Handheld.Vibrate();
+            Handheld.Vibrate();            
         }
     }
 }

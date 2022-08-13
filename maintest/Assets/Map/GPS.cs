@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public class GPS : MonoBehaviour
 {
@@ -12,7 +14,10 @@ public class GPS : MonoBehaviour
     string url;
     public WaitForSeconds second;
     public Text debugText;
+
     public GameObject frame;
+    public GameObject HintBtn;
+    //public GameObject BlockHint;
 
 
     LocationInfo myGPSLocation;
@@ -26,7 +31,7 @@ public class GPS : MonoBehaviour
     /**
 ????* Latitude - 경도, Longtitude - 위도 
 ????*/
-   // public double TargetLatitude, TargetLongtitude; // 37.507839, 127.039864
+    // public double TargetLatitude, TargetLongtitude; // 37.507839, 127.039864
 
 
     LocationInfo location;
@@ -40,10 +45,13 @@ public class GPS : MonoBehaviour
     public mapType mapSelected;
     public int scale;
 
+    public string HintName { get; private set; }
+
 
     private void Start()
     {
         frame.SetActive(false);
+        HintBtn.SetActive(false);
     }
 
     private void Update()
@@ -55,9 +63,6 @@ public class GPS : MonoBehaviour
             isUpdating = !isUpdating;
         }
     }
-
-
-
 
     IEnumerator GetLocation()
     {
@@ -112,27 +117,29 @@ public class GPS : MonoBehaviour
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FnXCYIqh.png%2FQVT2pqX.png%7C37.591278,127.020851" + //대나무숲 //발자국
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F7oCkbvi.png%2FQVT2pqX.png%7C37.590813,127.021484" + //도서관 그림 //고양이밥
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FfBOChlf.png%2FQVT2pqX.png%7C37.591274,127.020851" + //성신여대 정문 //장난감
-
+            "&markers=color:blue%7Cllabel:D%7C" + "37.510284,127.088417" + //집 기준
             "&key=AIzaSyATpBKPhD1nbjcXsW0cR-i6EzJTf8xkdpM";
 
             //"&markers=size:tiny%7color:red%7Clabel:S%7C37.5912657864989,127.02206239287148" + //학교
             //"&markers=size:tiny%7color:red%7Clabel:S%7C37.556533,126.936731" + //풋락커
             //"&markers=color:green%7Cllabel:D%7C" + "37.566332,126.843170" + //집 기준
-            //"&markers=color:blue%7Cllabel:D%7C" + "37.566427,126.842548" + //집 기준
-
-
+            //"&markers=color:blue%7Cllabel:D%7C" + "37.566427,126.842548" + //집 기준         
 
             WWW www = new WWW(url);
             yield return www;
             img.texture = www.texture;
-            debugText.text = getUpdatedGPSstring(37.59257, 127.021065); //현위치
-            debugText.text += getUpdatedGPSstring(37.591175, 127.022247); // 벽돌
-            debugText.text += getUpdatedGPSstring(37.591057, 127.021561); // 종합안내도
-            debugText.text += getUpdatedGPSstring(37.591595, 127.022446); // 성신역사관
-            debugText.text += getUpdatedGPSstring(37.591972, 127.021332); // 종합상황실
-            debugText.text += getUpdatedGPSstring(37.591278, 127.020851); // 대나무 숲
-            debugText.text += getUpdatedGPSstring(37.590813, 127.021484); // 도서관 그림
-            debugText.text += getUpdatedGPSstring(37.591274, 127.020851); // 정신여대 정문 그림
+
+            debugText.text = "\n\n가장 가까운 목표와의 거리 : \n약 " + Closest() + "M" + "\n";
+
+            //debugText.text += getUpdatedGPSstring(37.591175, 127.022247); // 벽돌
+            //debugText.text += getUpdatedGPSstring(37.591057, 127.021561); // 종합안내도
+            //debugText.text += getUpdatedGPSstring(37.591595, 127.022446); // 성신역사관
+            //debugText.text += getUpdatedGPSstring(37.591972, 127.021332); // 종합상황실
+            //debugText.text += getUpdatedGPSstring(37.591278, 127.020851); // 대나무 숲
+            //debugText.text += getUpdatedGPSstring(37.590813, 127.021484); // 도서관 그림
+            //debugText.text += getUpdatedGPSstring(37.591274, 127.020851); // 정신여대 정문 그림
+            debugText.text += UpdateDistance(37.510284, 127.088417); // 집
+
             //img.SetNativeSize();
 
         }
@@ -141,7 +148,52 @@ public class GPS : MonoBehaviour
         isUpdating = !isUpdating;
         Input.location.Stop();
     }
-    string getUpdatedGPSstring(double TargetLatitude,double TargetLongtitude)
+
+
+    public double Closest()
+    {
+    //double place1 = UpdateDistance(37.591175, 127.022247); // 벽돌
+    double place2 = UpdateDistance(37.591057, 127.021561); // 종합안내도
+        double place3 = UpdateDistance(37.591595, 127.022446); // 성신역사관
+        double place4 = UpdateDistance(37.591972, 127.021332); // 종합상황실
+        double place5 = UpdateDistance(37.591278, 127.020851); // 대나무 숲
+        double place6 = UpdateDistance(37.590813, 127.021484); // 도서관 그림
+        double place7 = UpdateDistance(37.591274, 127.020851); // 정신여대 정문 그림
+        double place1 = UpdateDistance(37.510284, 127.088417); // 집
+
+    double[] data = { place1, place2, place3, place4, place5, place6, place7 };
+
+        double min = data[0];
+
+        for (int i = 0; i < data.Length; i++)
+        {
+            //최솟값 구하기
+            if (min > data[i])
+            {
+                min = data[i];
+            }
+        }
+
+       
+        if (min == place1) {HintName = "Hint1"; }
+
+        if (min == place2) { HintName = "Hint2"; }
+
+        if (min == place3) { HintName = "Hint3"; }
+
+        if (min == place4) { HintName = "Hint4"; }
+
+        if (min == place5) { HintName = "Hint5"; }
+
+        if (min == place6) { HintName = "Hint6"; }
+
+        if (min == place7) { HintName = "Hint7"; }
+
+
+        return min;
+    }
+
+    double UpdateDistance(double TargetLatitude, double TargetLongtitude)
     {
         myGPSLocation = Input.location.lastData;
 
@@ -149,35 +201,28 @@ public class GPS : MonoBehaviour
         MyLatitude = Math.Round(myGPSLocation.latitude, 6);
 
         double DistanceToMeter;
-        string storeRange;
-      
+
+
         //두 점간의 거리
         DistanceToMeter = distance(MyLatitude, MyLongtitude, TargetLatitude, TargetLongtitude, DistUnit.meter);
         //DistanceToMeter = distance (37.507775, 127.039675, 37.507660, 127.039530, "meter"); // 20미터 이내 거리체크
 
         if (DistanceToMeter < 5)
         {// 건물의 높낮이 등 환경적인 요소로 인해 오차가 발생 할 수 있음.
-            storeRange = "근처 O";
+            //근처 O
             frame.SetActive(true);
+            HintBtn.SetActive(true);
         }
         else
         {
-            storeRange = "근처 X";
+            //근처 X
             frame.SetActive(false);
+            HintBtn.SetActive(false);
         }
 
-        return "\n현재위치 :\n" +
-        "경도 - " + Math.Round(MyLatitude, 6) + "," + "위도 - " + Math.Round(MyLongtitude, 6) +
 
-        "\n\n" + "목표위치 : " + LocationName + "\n" +
-        "경도 - " + TargetLatitude + "," + "위도 - " + TargetLongtitude +
-
-        "\n\n목표와의 거리 : \n약 " + DistanceToMeter + "M" + "\n" +
-         storeRange + "\n-------------\n";
+        return DistanceToMeter;
     }
-
-
-
 
     /**
 ???? * 두 지점간의 거리 계산

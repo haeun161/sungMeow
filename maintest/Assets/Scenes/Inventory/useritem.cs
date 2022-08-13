@@ -13,11 +13,11 @@ public class useritem : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        Debug.Log(Web.realusername);
-        StartCoroutine(Web.getCrystal(Web.realusername));
+        Debug.Log(MainScript.Instance.UserInfo.UserName);
+        StartCoroutine(Web.getCrystal(MainScript.Instance.UserInfo.UserName));
         for (int i = 0; i < itemnames.Length; i++)
         {
-            StartCoroutine(Web.getUsersItems(Web.realusername, itemnames[i], i));
+            StartCoroutine(Web.getUsersItems(MainScript.Instance.UserInfo.UserName, itemnames[i], i));
         }
        
     }

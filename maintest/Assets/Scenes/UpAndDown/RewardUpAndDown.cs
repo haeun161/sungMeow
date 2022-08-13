@@ -12,9 +12,8 @@ public class RewardUpAndDown : MonoBehaviour
     void Start()
     {
         answerText.text += UpAndDownBtnType.answer;
-        StartCoroutine(Web.updateCrystal(Web.realusername, UpAndDownBtnType.score));
+        StartCoroutine(Web.updateCrystal(MainScript.Instance.UserInfo.UserName, UpAndDownBtnType.score));
     }
-
 
     // Update is called once per frame
     void Update()

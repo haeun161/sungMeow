@@ -9,7 +9,7 @@ public class scorescript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Web.updateCrystal(Web.realusername, GameController1.score));
+        StartCoroutine(Web.updateCrystal(MainScript.Instance.UserInfo.UserName, GameController1.score));
     }
 
     // Update is called once per frame

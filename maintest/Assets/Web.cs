@@ -20,11 +20,11 @@ public class Web : MonoBehaviour
         errorpopup.SetActive(false);
         signuperrorpopup.SetActive(false);
     }
-
+    /*
     public void ShowUserItems()
     {
         StartCoroutine(GetItemsName(MainScript.Instance.UserInfo.UserName));
-    }
+    }*/
 
     IEnumerator GetDate()
     {
@@ -103,8 +103,8 @@ public class Web : MonoBehaviour
                 //If we logged in correctly
                 else
                 {
-                    realusername = username;
                     SceneManager.LoadScene("Main");
+                    //realusername = username;
                     //MainScript.Instance.UserProfile.SetActive(true);
                     //MainScript.Instance.Login.gameObject.SetActive(false);
                 }
@@ -153,30 +153,7 @@ public class Web : MonoBehaviour
             }
         }
     }
-    public IEnumerator GetItemsName(string username)
-    {
-        WWWForm form = new WWWForm();
-        form.AddField("username", username);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/GetItemsName.php", form))
-        {
-            // Request and wait for the desired page.
-            yield return www.Send();
-
-            if (www.isNetworkError || www.isHttpError)
-            {
-                Debug.Log(www.error);
-            }
-            else
-            {
-                Debug.Log(www.downloadHandler.text);
-                string jsonArray = www.downloadHandler.text;
-
-                //Call callback function to pass results
-            }
-
-        }
-    }
     public static IEnumerator getUsersItems(string username, string itemname, int itemindex)
     {
         WWWForm form = new WWWForm();
@@ -257,7 +234,7 @@ public class Web : MonoBehaviour
             {
                for (int i = 0; i < useritem.itemnames.Length; i++)
                 {
-                    getUsersItems(Web.realusername, useritem.itemnames[i], i);
+                    getUsersItems(MainScript.Instance.UserInfo.UserName, useritem.itemnames[i], i);
                 } 
             }
         }
