@@ -9,7 +9,7 @@ public class FindtheCatScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Web.updateCrystal(Web.realusername, FindtheCatBtnType.score));
     }
 
     // Update is called once per frame

@@ -103,8 +103,8 @@ public class Web : MonoBehaviour
                 //If we logged in correctly
                 else
                 {
-                    SceneManager.LoadScene("Main");
                     realusername = username;
+                    SceneManager.LoadScene("Main");
                     //MainScript.Instance.UserProfile.SetActive(true);
                     //MainScript.Instance.Login.gameObject.SetActive(false);
                 }

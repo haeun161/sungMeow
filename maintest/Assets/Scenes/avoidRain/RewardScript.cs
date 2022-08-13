@@ -11,6 +11,7 @@ public class RewardScript : MonoBehaviour
     void Start()
     {
         //rewardText = GetComponent<TextMeshProUGUI>();
+        StartCoroutine(Web.updateCrystal(Web.realusername, (int.Parse(GameController.strTime)) * 2));
 
     }
 
