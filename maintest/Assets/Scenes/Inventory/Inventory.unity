@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 181865005}
   - component: {fileID: 181865004}
   - component: {fileID: 181865003}
+  - component: {fileID: 181865006}
   m_Layer: 5
   m_Name: yes
   m_TagString: Untagged
@@ -217,6 +218,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 181865006}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buysure
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &181865004
@@ -257,6 +270,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181865001}
   m_CullTransparentMesh: 1
+--- !u!114 &181865006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181865001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &216910489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1095,7 @@ GameObject:
   - component: {fileID: 528203031}
   - component: {fileID: 528203030}
   - component: {fileID: 528203029}
+  - component: {fileID: 528203032}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -1166,6 +1192,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 528203032}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyFish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &528203030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,6 +1242,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528203027}
   m_CullTransparentMesh: 1
+--- !u!114 &528203032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528203027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &530283172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,6 +2600,7 @@ GameObject:
   - component: {fileID: 872666689}
   - component: {fileID: 872666688}
   - component: {fileID: 872666687}
+  - component: {fileID: 872666690}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -2646,6 +2697,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 872666690}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyScarf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &872666688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2684,6 +2747,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872666685}
   m_CullTransparentMesh: 1
+--- !u!114 &872666690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872666685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891129223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,6 +4968,7 @@ GameObject:
   - component: {fileID: 1398902921}
   - component: {fileID: 1398902920}
   - component: {fileID: 1398902919}
+  - component: {fileID: 1398902922}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -4989,6 +5065,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1398902922}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyPillow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1398902920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5027,6 +5115,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398902917}
   m_CullTransparentMesh: 1
+--- !u!114 &1398902922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398902917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409277761
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,6 +5484,7 @@ GameObject:
   - component: {fileID: 1567643273}
   - component: {fileID: 1567643272}
   - component: {fileID: 1567643271}
+  - component: {fileID: 1567643274}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -5410,7 +5511,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 23, y: -221}
-  m_SizeDelta: {x: 304, y: 155}
+  m_SizeDelta: {x: 398, y: 203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567643271
 MonoBehaviour:
@@ -5480,6 +5581,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1567643274}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyBowl
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1567643272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5518,6 +5631,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567643269}
   m_CullTransparentMesh: 1
+--- !u!114 &1567643274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567643269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1591694952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5893,6 +6018,7 @@ GameObject:
   - component: {fileID: 1615783418}
   - component: {fileID: 1615783417}
   - component: {fileID: 1615783416}
+  - component: {fileID: 1615783419}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -5989,6 +6115,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1615783419}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyRibbon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1615783417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6027,6 +6165,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615783414}
   m_CullTransparentMesh: 1
+--- !u!114 &1615783419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615783414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1635939520
 GameObject:
   m_ObjectHideFlags: 0
@@ -6252,6 +6402,7 @@ GameObject:
   - component: {fileID: 1717057709}
   - component: {fileID: 1717057708}
   - component: {fileID: 1717057707}
+  - component: {fileID: 1717057710}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -6348,6 +6499,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1717057710}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyString
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1717057708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6386,6 +6549,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717057705}
   m_CullTransparentMesh: 1
+--- !u!114 &1717057710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717057705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1724201988
 GameObject:
   m_ObjectHideFlags: 0
@@ -6995,6 +7170,7 @@ GameObject:
   - component: {fileID: 1864470796}
   - component: {fileID: 1864470795}
   - component: {fileID: 1864470794}
+  - component: {fileID: 1864470797}
   m_Layer: 5
   m_Name: CrystalBox
   m_TagString: Untagged
@@ -7091,6 +7267,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1864470797}
+        m_TargetAssemblyTypeName: buyItems, Assembly-CSharp
+        m_MethodName: buyCrown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1864470795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7129,6 +7317,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864470792}
   m_CullTransparentMesh: 1
+--- !u!114 &1864470797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864470792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c07a287b1e77143a3cbb8883b07d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1903120109
 GameObject:
   m_ObjectHideFlags: 0
@@ -7384,7 +7584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -31.999878, y: 0}
+  m_AnchoredPosition: {x: -32, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1913546100

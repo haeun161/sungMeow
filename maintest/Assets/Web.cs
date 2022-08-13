@@ -190,6 +190,25 @@ public class Web : MonoBehaviour
             }
         }
     }
+    public static IEnumerator updateCrystal(string username, int crystal)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", username);
+        form.AddField("crystal", crystal);
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/UpdateCrystal.php", form))
+        {
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                getCrystal(username);
+
+            }
+        }
+    }
 
 }
 

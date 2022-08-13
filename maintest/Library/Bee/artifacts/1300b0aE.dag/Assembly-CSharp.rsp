@@ -372,6 +372,7 @@
 "Assets/Scenes/FindtheCat/FindtheCatBtnType.cs"
 "Assets/Scenes/FindtheCat/FindtheCatScore.cs"
 "Assets/Scenes/FindtheCat/FindtheCatUI.cs"
+"Assets/Scenes/Inventory/buyItems.cs"
 "Assets/Scenes/Inventory/Inventory.cs"
 "Assets/Scenes/Inventory/useritem.cs"
 "Assets/Scenes/Matching/Change2.cs"
