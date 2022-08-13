@@ -10,11 +10,15 @@ using UnityEngine.SceneManagement;
 public class Web : MonoBehaviour
 {
     public static string realusername;
+    public GameObject errorpopup;
+    public GameObject signuperrorpopup;
     void Start()
     {
         //StartCoroutine(GetDate());
         //StartCoroutine(Login("haeun","pw1234"));
         //StartCoroutine(RegisterUser("subin2", "pw12342", "1@gmail.com"));
+        errorpopup.SetActive(false);
+        signuperrorpopup.SetActive(false);
     }
 
     public void ShowUserItems()
@@ -62,6 +66,11 @@ public class Web : MonoBehaviour
 
         }
     }
+    public void popupDeactivate()
+    {
+        errorpopup.SetActive(false);
+    }
+
     public IEnumerator Login(string username, string password)
     {
         WWWForm form = new WWWForm();
@@ -86,6 +95,9 @@ public class Web : MonoBehaviour
                 if (www.downloadHandler.text.Contains("wrong password") || www.downloadHandler.text.Contains("Username does not exist."))
                 {
                     Debug.Log("Try Again");
+                    errorpopup.SetActive(true);
+                    Invoke("popupDeactivate", 2f);
+
                 }
 
                 //If we logged in correctly
@@ -101,6 +113,11 @@ public class Web : MonoBehaviour
             }
         }
     }
+    public void signuperrorDeactivate()
+    {
+        signuperrorpopup.SetActive(false);
+    }
+
     public IEnumerator RegisterUser(string username, string password, string email)
     {
         WWWForm form = new WWWForm();
@@ -118,6 +135,21 @@ public class Web : MonoBehaviour
             else
             {
                 Debug.Log(www.downloadHandler.text);
+
+                if (www.downloadHandler.text.Contains("Username is already taken."))
+                {
+                    Debug.Log("Try Again");
+                    signuperrorpopup.SetActive(true);
+                    Invoke("signuperrorDeactivate", 2f);
+                }
+
+                //If we logged in correctly
+                else
+                {
+                    if (www.downloadHandler.text.Contains("New record created successfully")) //회원가입 성공
+                        SceneManager.LoadScene("Login");
+                    else Debug.Log("Try Again");
+                }
             }
         }
     }
