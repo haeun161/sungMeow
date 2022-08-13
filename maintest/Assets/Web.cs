@@ -209,6 +209,26 @@ public class Web : MonoBehaviour
             }
         }
     }
-
+    public static IEnumerator updateItem(string username, string itemname)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("username", username);
+        form.AddField("itemname", itemname);
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/UpdateItem.php", form))
+        {
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+               for (int i = 0; i < useritem.itemnames.Length; i++)
+                {
+                    getUsersItems(Web.realusername, useritem.itemnames[i], i);
+                } 
+            }
+        }
+    }
 }
 

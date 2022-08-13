@@ -37,7 +37,12 @@ public class useritem : MonoBehaviour
     {
 
         crystalText.text = realcrystal.ToString();
- 
+        string a = null;
+        for (int i = 0; i < itemnames.Length; i++)
+        {
+            a += hasitem[i];
+        }
+        Debug.Log(a);
         if (hasitem[0] == 1)
         {
             gameObject0.SetActive(false);

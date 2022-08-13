@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class buyItems : MonoBehaviour
 {
     //public static int[] itemprice = new int[] { 500, 700, 3500, 2000, 1500, 2500, 9999 };
@@ -48,5 +48,7 @@ public class buyItems : MonoBehaviour
     {
         StartCoroutine(Web.getCrystal(Web.realusername));
         StartCoroutine(Web.updateCrystal(Web.realusername,price));
+        StartCoroutine(Web.updateItem(Web.realusername, itemname));
+        SceneManager.LoadScene("inventory");
     }
 }
