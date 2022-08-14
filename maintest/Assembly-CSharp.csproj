@@ -73,7 +73,6 @@
     <Compile Include="Assets\Scenes\UpAndDown\UpAndDownScript.cs" />
     <Compile Include="Assets\UserInfo.cs" />
     <Compile Include="Assets\Scenes\UpAndDown\UpDownimg.cs" />
-    <Compile Include="Assets\Scenes\Map\HintBtn.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scenes\avoidRain\RewardScript.cs" />
     <Compile Include="Assets\Scenes\Map\GPS.cs" />

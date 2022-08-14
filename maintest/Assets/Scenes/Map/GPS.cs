@@ -47,11 +47,25 @@ public class GPS : MonoBehaviour
 
     public static string HintName;
 
+    public GameObject Hint1;
+    public GameObject Hint2;
+    public GameObject Hint3;
+    public GameObject Hint4;
+    public GameObject Hint5;
+    public GameObject Hint6;
+    public GameObject Hint7;
 
     private void Start()
     {
         frame.SetActive(false);
         HintBtn.SetActive(false);
+        Hint1.SetActive(false);
+        Hint2.SetActive(false);
+        Hint3.SetActive(false);
+        Hint4.SetActive(false);
+        Hint5.SetActive(false);
+        Hint6.SetActive(false);
+        Hint7.SetActive(false);
     }
 
     private void Update()
@@ -109,7 +123,7 @@ public class GPS : MonoBehaviour
             "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale + "&maptype=" + mapSelected +
             "&markers=color:red%7Cllabel:D%7C" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + //내위치
 
-            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.57595, 126.8383" + //현위치 근처로 랜덤 추가
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.57595,126.8383" + //현위치 근처로 랜덤 추가
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.591175,127.022247" + //벽돌 //밥그릇            
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591057,127.021561" + //종합안내도 //쥐
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591595,127.022446" + //성신역사관 //쥐
@@ -150,6 +164,10 @@ public class GPS : MonoBehaviour
         Input.location.Stop();
     }
 
+    private void Hide()
+    {
+        gameObject.SetActive(false);
+    }
 
     public double Closest()
     {
@@ -174,8 +192,9 @@ public class GPS : MonoBehaviour
                 min = data[i];
             }
         }
-       
-        if (min == place1) {HintName = "HintName1"; }
+
+
+        if (min == place1) { HintName = "HintName1"; }
 
         if (min == place2) { HintName = "HintName2"; }
 
@@ -190,7 +209,58 @@ public class GPS : MonoBehaviour
         if (min == place7) { HintName = "HintName7"; }
 
 
+
         return min;
+    }
+
+    public void HintButtonClick()
+    {
+        if (GPS.HintName == "HintName1")
+        {
+            Hint1.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+        if (GPS.HintName == "HintName2")
+        {
+            Hint2.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+        if (GPS.HintName == "HintName3")
+        {
+            Hint3.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+        if (GPS.HintName == "HintName4")
+        {
+            Hint4.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+        if (GPS.HintName == "HintName5")
+        {
+            Hint5.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+        if (GPS.HintName == "HintName6")
+        {
+            Hint6.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+        if (GPS.HintName == "HintName7")
+        {
+            Hint7.SetActive(true);
+            Invoke("Hide", 5f);
+        }
+    }
+
+        public void HintPop()
+    {
+        if (GPS.HintName == "HintName1") { SceneManager.LoadScene("Hint1", LoadSceneMode.Single); }
+        if (GPS.HintName == "HintName2") { SceneManager.LoadScene("Hint2", LoadSceneMode.Single); }
+        if (GPS.HintName == "HintName3") { SceneManager.LoadScene("Hint3", LoadSceneMode.Single); }
+        if (GPS.HintName == "HintName4") { SceneManager.LoadScene("Hint4", LoadSceneMode.Single); }
+        if (GPS.HintName == "HintName5") { SceneManager.LoadScene("Hint5", LoadSceneMode.Single); }
+        if (GPS.HintName == "HintName6") { SceneManager.LoadScene("Hint6", LoadSceneMode.Single); }
+        if (GPS.HintName == "HintName7") { SceneManager.LoadScene("Hint7", LoadSceneMode.Single); }
     }
 
     double UpdateDistance(double TargetLatitude, double TargetLongtitude)

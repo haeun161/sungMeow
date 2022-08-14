@@ -329,7 +329,6 @@
 "Assets/Scenes/Inventory/Inventory.cs"
 "Assets/Scenes/Inventory/useritem.cs"
 "Assets/Scenes/Map/GPS.cs"
-"Assets/Scenes/Map/HintBtn.cs"
 "Assets/Scenes/Map/Loading.cs"
 "Assets/Scenes/Matching/Change2.cs"
 "Assets/Scenes/Matching/GameController1.cs"

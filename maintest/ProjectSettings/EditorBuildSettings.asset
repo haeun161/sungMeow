@@ -89,25 +89,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/login.unity
     guid: 06604255060d151489a846968313ab78
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint1.unity
-    guid: d6dad17a928e0194cb5d03cf4f6c62ef
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint2.unity
-    guid: 11dfb5a5beab1bf4c893e49dde08289c
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint3.unity
-    guid: 8fab59da0a0f1b649a0e950e4ba35721
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint4.unity
-    guid: 10e74870ce31f3b48898677522c307fd
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint5.unity
-    guid: d35734fcd9fda1d40a564ba1f41aaf11
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint6.unity
-    guid: 81bafe92d45c076488b0809b31964179
-  - enabled: 1
-    path: Assets/Scenes/Map/Hint7.unity
-    guid: f957e4cdc1c673f4b9b527512c5beea2
   m_configObjects: {}
