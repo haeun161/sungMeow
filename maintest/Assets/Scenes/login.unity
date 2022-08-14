@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 381240542}
   - component: {fileID: 381240541}
   - component: {fileID: 381240544}
+  - component: {fileID: 381240545}
   m_Layer: 5
   m_Name: gosignupbtn
   m_TagString: Untagged
@@ -585,16 +586,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 381240544}
-        m_TargetAssemblyTypeName: Login, Assembly-CSharp
-        m_MethodName: GoSignup
-        m_Mode: 1
+      - m_Target: {fileID: 381240545}
+        m_TargetAssemblyTypeName: GoToScene, Assembly-CSharp
+        m_MethodName: GoToScene1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: signup
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &381240542
@@ -650,6 +651,18 @@ MonoBehaviour:
   UsernameInput: {fileID: 77406131}
   PasswordInput: {fileID: 759028951}
   LoginButton: {fileID: 1457024236}
+--- !u!114 &381240545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381240539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bec0820a267efe488ca80859ee8cc76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &597262154
 GameObject:
   m_ObjectHideFlags: 0
