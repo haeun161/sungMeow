@@ -1,7 +1,4 @@
-#Tue Aug 09 21:26:03 KST 2022
-base.0=C\:\\SungMoew\\maintest\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
+#Sun Aug 14 11:34:20 KST 2022
+base.0=C\:\\Users\\haeun\\Documents\\SungMeow22\\sungMeow\\maintest\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\haeun\\Documents\\SungMeow22\\sungMeow\\maintest\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex

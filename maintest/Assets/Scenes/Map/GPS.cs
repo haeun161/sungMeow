@@ -45,7 +45,7 @@ public class GPS : MonoBehaviour
     public mapType mapSelected;
     public int scale;
 
-    public string HintName { get; private set; }
+    public static string HintName;
 
 
     private void Start()
@@ -109,7 +109,7 @@ public class GPS : MonoBehaviour
             "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale + "&maptype=" + mapSelected +
             "&markers=color:red%7Cllabel:D%7C" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + //내위치
 
-            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.59257,127.021065" + //현위치 근처로 랜덤 추가
+            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.57595, 126.8383" + //현위치 근처로 랜덤 추가
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.591175,127.022247" + //벽돌 //밥그릇            
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591057,127.021561" + //종합안내도 //쥐
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591595,127.022446" + //성신역사관 //쥐
@@ -138,7 +138,8 @@ public class GPS : MonoBehaviour
             //debugText.text += getUpdatedGPSstring(37.591278, 127.020851); // 대나무 숲
             //debugText.text += getUpdatedGPSstring(37.590813, 127.021484); // 도서관 그림
             //debugText.text += getUpdatedGPSstring(37.591274, 127.020851); // 정신여대 정문 그림
-            debugText.text += UpdateDistance(37.510284, 127.088417); // 집
+            //debugText.text += UpdateDistance(37.510284, 127.088417); // 집
+            //debugText.text += UpdateDistance(37.57595, 126.8383); // 서울식물원 근처
 
             //img.SetNativeSize();
 
@@ -152,16 +153,16 @@ public class GPS : MonoBehaviour
 
     public double Closest()
     {
-    //double place1 = UpdateDistance(37.591175, 127.022247); // 벽돌
-    double place2 = UpdateDistance(37.591057, 127.021561); // 종합안내도
+        //double place1 = UpdateDistance(37.591175, 127.022247); // 벽돌
+        double place2 = UpdateDistance(37.591057, 127.021561); // 종합안내도
         double place3 = UpdateDistance(37.591595, 127.022446); // 성신역사관
         double place4 = UpdateDistance(37.591972, 127.021332); // 종합상황실
         double place5 = UpdateDistance(37.591278, 127.020851); // 대나무 숲
         double place6 = UpdateDistance(37.590813, 127.021484); // 도서관 그림
         double place7 = UpdateDistance(37.591274, 127.020851); // 정신여대 정문 그림
-        double place1 = UpdateDistance(37.510284, 127.088417); // 집
+        double place1 = UpdateDistance(37.57595, 126.8383); // 서울식물원 근처
 
-    double[] data = { place1, place2, place3, place4, place5, place6, place7 };
+        double[] data = { place1, place2, place3, place4, place5, place6, place7 };
 
         double min = data[0];
 
@@ -173,21 +174,20 @@ public class GPS : MonoBehaviour
                 min = data[i];
             }
         }
-
        
-        if (min == place1) {HintName = "Hint1"; }
+        if (min == place1) {HintName = "HintName1"; }
 
-        if (min == place2) { HintName = "Hint2"; }
+        if (min == place2) { HintName = "HintName2"; }
 
-        if (min == place3) { HintName = "Hint3"; }
+        if (min == place3) { HintName = "HintName3"; }
 
-        if (min == place4) { HintName = "Hint4"; }
+        if (min == place4) { HintName = "HintName4"; }
 
-        if (min == place5) { HintName = "Hint5"; }
+        if (min == place5) { HintName = "HintName5"; }
 
-        if (min == place6) { HintName = "Hint6"; }
+        if (min == place6) { HintName = "HintName6"; }
 
-        if (min == place7) { HintName = "Hint7"; }
+        if (min == place7) { HintName = "HintName7"; }
 
 
         return min;

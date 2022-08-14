@@ -1,3 +1,6 @@
+UnityEngine.Networking
+UnityEngine.Network
 UnityEngine.WWW
+UnityEngine.Networking.UnityWebRequest
 UnityEngine.Handheld::Vibrate
 UnityEngine.Input::get_location
