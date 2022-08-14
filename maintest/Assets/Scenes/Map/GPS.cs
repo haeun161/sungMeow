@@ -28,9 +28,9 @@ public class GPS : MonoBehaviour
     double MyLatitude, MyLongtitude;
     DistUnit unit;
 
-    /**
-????* Latitude - 경도, Longtitude - 위도 
-????*/
+   
+ //Latitude - 경도, Longtitude - 위도 
+
     // public double TargetLatitude, TargetLongtitude; // 37.507839, 127.039864
 
 
@@ -123,7 +123,7 @@ public class GPS : MonoBehaviour
             "&zoom=" + zoom + "&size=" + mapWidth + "x" + mapHeight + "&scale=" + scale + "&maptype=" + mapSelected +
             "&markers=color:red%7Cllabel:D%7C" + Input.location.lastData.latitude + "," + Input.location.lastData.longitude + //내위치
 
-            "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.57595,126.8383" + //현위치 근처로 랜덤 추가
+            //"&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.64033,126.8344" + //현위치 근처로 랜덤 추가
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F13M4rVZ.png%7C37.591175,127.022247" + //벽돌 //밥그릇            
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591057,127.021561" + //종합안내도 //쥐
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FXUpV1En.png%2FQVT2pqX.png%7C37.591595,127.022446" + //성신역사관 //쥐
@@ -131,7 +131,7 @@ public class GPS : MonoBehaviour
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FnXCYIqh.png%2FQVT2pqX.png%7C37.591278,127.020851" + //대나무숲 //발자국
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2F7oCkbvi.png%2FQVT2pqX.png%7C37.590813,127.021484" + //도서관 그림 //고양이밥
             "&markers=label:S|icon:https%3A%2F%2Fi.imgur.com%2FfBOChlf.png%2FQVT2pqX.png%7C37.591274,127.020851" + //성신여대 정문 //장난감
-            "&markers=color:blue%7Cllabel:D%7C" + "37.510284,127.088417" + //집 기준
+            "&markers=color:blue%7Cllabel:D%7C" + "37.64033,126.8344" + //집 기준
             "&key=AIzaSyATpBKPhD1nbjcXsW0cR-i6EzJTf8xkdpM";
 
             //"&markers=size:tiny%7color:red%7Clabel:S%7C37.5912657864989,127.02206239287148" + //학교
@@ -166,7 +166,13 @@ public class GPS : MonoBehaviour
 
     private void Hide()
     {
-        gameObject.SetActive(false);
+        Hint1.SetActive(false);
+        Hint2.SetActive(false);
+        Hint3.SetActive(false);
+        Hint4.SetActive(false);
+        Hint5.SetActive(false);
+        Hint6.SetActive(false);
+        Hint7.SetActive(false);
     }
 
     public double Closest()
@@ -178,7 +184,7 @@ public class GPS : MonoBehaviour
         double place5 = UpdateDistance(37.591278, 127.020851); // 대나무 숲
         double place6 = UpdateDistance(37.590813, 127.021484); // 도서관 그림
         double place7 = UpdateDistance(37.591274, 127.020851); // 정신여대 정문 그림
-        double place1 = UpdateDistance(37.57595, 126.8383); // 서울식물원 근처
+        double place1 = UpdateDistance(37.64033, 126.8344); // 서울식물원 근처
 
         double[] data = { place1, place2, place3, place4, place5, place6, place7 };
 
@@ -218,50 +224,40 @@ public class GPS : MonoBehaviour
         if (GPS.HintName == "HintName1")
         {
             Hint1.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
         if (GPS.HintName == "HintName2")
         {
             Hint2.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
         if (GPS.HintName == "HintName3")
         {
             Hint3.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
         if (GPS.HintName == "HintName4")
         {
             Hint4.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
         if (GPS.HintName == "HintName5")
         {
             Hint5.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
         if (GPS.HintName == "HintName6")
         {
             Hint6.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
         if (GPS.HintName == "HintName7")
         {
             Hint7.SetActive(true);
-            Invoke("Hide", 5f);
+            Invoke("Hide", 3f);
         }
     }
 
-        public void HintPop()
-    {
-        if (GPS.HintName == "HintName1") { SceneManager.LoadScene("Hint1", LoadSceneMode.Single); }
-        if (GPS.HintName == "HintName2") { SceneManager.LoadScene("Hint2", LoadSceneMode.Single); }
-        if (GPS.HintName == "HintName3") { SceneManager.LoadScene("Hint3", LoadSceneMode.Single); }
-        if (GPS.HintName == "HintName4") { SceneManager.LoadScene("Hint4", LoadSceneMode.Single); }
-        if (GPS.HintName == "HintName5") { SceneManager.LoadScene("Hint5", LoadSceneMode.Single); }
-        if (GPS.HintName == "HintName6") { SceneManager.LoadScene("Hint6", LoadSceneMode.Single); }
-        if (GPS.HintName == "HintName7") { SceneManager.LoadScene("Hint7", LoadSceneMode.Single); }
-    }
 
     double UpdateDistance(double TargetLatitude, double TargetLongtitude)
     {
@@ -277,7 +273,7 @@ public class GPS : MonoBehaviour
         DistanceToMeter = distance(MyLatitude, MyLongtitude, TargetLatitude, TargetLongtitude, DistUnit.meter);
         //DistanceToMeter = distance (37.507775, 127.039675, 37.507660, 127.039530, "meter"); // 20미터 이내 거리체크
 
-        if (DistanceToMeter < 5)
+        if (DistanceToMeter < 8)
         {// 건물의 높낮이 등 환경적인 요소로 인해 오차가 발생 할 수 있음.
             //근처 O
             frame.SetActive(true);

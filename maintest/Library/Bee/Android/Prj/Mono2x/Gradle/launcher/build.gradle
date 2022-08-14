@@ -31,10 +31,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('C:/Users/haeun/Documents/SungMeow22/sungMeow/maintest/user.keystore')
-            storePassword 'pw1234'
-            keyAlias 'pw'
-            keyPassword 'pw1234'
+            storeFile file('C:/Users/parks/.android/user.keystore')
+            storePassword '202121'
+            keyAlias 'sungmeow'
+            keyPassword '202121'
         }
     }
 
