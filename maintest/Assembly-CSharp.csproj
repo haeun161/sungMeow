@@ -76,6 +76,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scenes\avoidRain\RewardScript.cs" />
     <Compile Include="Assets\Scenes\Map\GPS.cs" />
+    <Compile Include="Assets\Scenes\Crystal.cs" />
     <Compile Include="Assets\Login.cs" />
     <Compile Include="Assets\Scenes\avoidRain\Player.cs" />
     <Compile Include="Assets\Scenes\Inventory\buyItems.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Assets\MainUI.cs" />
     <Compile Include="Assets\Scenes\Inventory\useritem.cs" />
     <Compile Include="Assets\Scenes\Inventory\Inventory.cs" />
-    <Compile Include="Assets\Scenes\Crystal.cs" />
+    <Compile Include="Assets\Scenes\Inventory\popup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

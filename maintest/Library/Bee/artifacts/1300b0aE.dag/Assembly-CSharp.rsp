@@ -374,6 +374,7 @@
 "Assets/Scenes/FindtheCat/FindtheCatUI.cs"
 "Assets/Scenes/Inventory/buyItems.cs"
 "Assets/Scenes/Inventory/Inventory.cs"
+"Assets/Scenes/Inventory/popup.cs"
 "Assets/Scenes/Inventory/useritem.cs"
 "Assets/Scenes/Map/GPS.cs"
 "Assets/Scenes/Map/Loading.cs"
