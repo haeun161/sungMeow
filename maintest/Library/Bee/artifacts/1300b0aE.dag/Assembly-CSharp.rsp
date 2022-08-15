@@ -368,6 +368,7 @@
 "Assets/Scenes/avoidRain/Player.cs"
 "Assets/Scenes/avoidRain/RainDrop.cs"
 "Assets/Scenes/avoidRain/RewardScript.cs"
+"Assets/Scenes/Crystal.cs"
 "Assets/Scenes/FindtheCat/FindtheCatBtnType.cs"
 "Assets/Scenes/FindtheCat/FindtheCatScore.cs"
 "Assets/Scenes/FindtheCat/FindtheCatUI.cs"

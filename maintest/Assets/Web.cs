@@ -25,10 +25,10 @@ public class Web : MonoBehaviour
     {
         StartCoroutine(GetItemsName(MainScript.Instance.UserInfo.UserName));
     }*/
-
+    //http://221.149.176.198:8080/
     IEnumerator GetDate()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://221.149.176.198:8080/UnityBackendTutorial/GetUsers.php"))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:8080/UnityBackendTutorial/GetUsers.php"))
         {
             // Request and wait for the desired page.
             yield return www.Send();
@@ -48,7 +48,7 @@ public class Web : MonoBehaviour
     }
     public IEnumerator GetUsers()
     {
-        using (UnityWebRequest www = UnityWebRequest.Get("http://221.149.176.198:8080/UnityBackendTutorial/GetUsers.php"))
+        using (UnityWebRequest www = UnityWebRequest.Get("http://localhost:8080/UnityBackendTutorial/GetUsers.php"))
         {
             // Request and wait for the desired page.
             yield return www.Send();
@@ -76,7 +76,7 @@ public class Web : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("loginUser", username);
         form.AddField("loginPassword", password);
-        using (UnityWebRequest www = UnityWebRequest.Post("http://221.149.176.198:8080/UnityBackendTutorial/Login.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/Login.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
@@ -125,7 +125,7 @@ public class Web : MonoBehaviour
         form.AddField("loginPassword", password);
         form.AddField("loginEmail", email);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://221.149.176.198:8080/UnityBackendTutorial/RegisterUser.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/RegisterUser.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
@@ -159,7 +159,7 @@ public class Web : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("username", username);
         form.AddField("itemname", itemname);
-        using (UnityWebRequest www = UnityWebRequest.Post("http://221.149.176.198:8080/UnityBackendTutorial/GetUsersItems.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/GetUsersItems.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
@@ -183,7 +183,7 @@ public class Web : MonoBehaviour
     {
         WWWForm form = new WWWForm();
         form.AddField("username", username);
-        using (UnityWebRequest www = UnityWebRequest.Post("http://221.149.176.198:8080/UnityBackendTutorial/GetCrycstal.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/GetCrycstal.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
@@ -204,7 +204,7 @@ public class Web : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("username", username);
         form.AddField("crystal", crystal);
-        using (UnityWebRequest www = UnityWebRequest.Post("http://221.149.176.198:8080/UnityBackendTutorial/UpdateCrystal.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/UpdateCrystal.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)
@@ -223,7 +223,7 @@ public class Web : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("username", username);
         form.AddField("itemname", itemname);
-        using (UnityWebRequest www = UnityWebRequest.Post("http://221.149.176.198:8080/UnityBackendTutorial/UpdateItem.php", form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:8080/UnityBackendTutorial/UpdateItem.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isNetworkError || www.isHttpError)

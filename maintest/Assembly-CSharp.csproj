@@ -97,6 +97,7 @@
     <Compile Include="Assets\MainUI.cs" />
     <Compile Include="Assets\Scenes\Inventory\useritem.cs" />
     <Compile Include="Assets\Scenes\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Scenes\Crystal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
