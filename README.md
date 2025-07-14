@@ -36,7 +36,7 @@ Google Maps Platform과 Vuforia를 활용해 지도 및 증강현실 기능을 �
 - 위치 기반 포인트에 도달하면 실행되는 미니게임 제공  
 - Unity에서 직접 제작한 간단한 게임 콘텐츠
 
-> (아래는 미니게임 영상 링크입니다. GitHub에서 직접 재생은 되지 않으며 링크로 연결됩니다.)
+> 아래는 미니게임 시연 영상 링크입니다 (GitHub에서는 직접 재생되지 않으며 외부 링크로 연결됩니다):
 
 - [미니게임 1](https://github.com/user-attachments/assets/9767cead-2589-4713-be75-d6d6c06f59b8)  
 - [미니게임 2](https://github.com/user-attachments/assets/582f9f06-4c3c-4963-94f5-7862b545e20d)  
@@ -61,7 +61,7 @@ Google Maps Platform과 Vuforia를 활용해 지도 및 증강현실 기능을 �
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/eebbfaf0-1e49-4fea-84ac-7c796717b218" width="800"/><br/>
-  <img src="https://github.com/user-attachments/assets/64a2eaae-6bd4-4736-b34c-8411d40bba1d" width="400"/>
+  <img src="https://github.com/user-attachments/assets/64a2eaae-6bd4-4736-b34c-8411d40bba1d" width="800"/>
 </p>
 
 - [AR 시연 영상](https://github.com/user-attachments/assets/e4df0bff-853f-4b33-a052-47da5883f108)
@@ -73,7 +73,7 @@ Google Maps Platform과 Vuforia를 활용해 지도 및 증강현실 기능을 �
 - 게임 내에서 획득한 아이템을 확인 및 관리 가능
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ff0048af-21a4-43f4-b41e-80ce0e133d76" width="400"/>
+  <img src="https://github.com/user-attachments/assets/ff0048af-21a4-43f4-b41e-80ce0e133d76" width="800"/>
 </p>
 
 ---
@@ -83,7 +83,7 @@ Google Maps Platform과 Vuforia를 활용해 지도 및 증강현실 기능을 �
 - 유저 인증 및 신규 가입 처리
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/42f9ff87-1b86-4535-8055-cf50a276de2d" width="400"/>
+  <img src="https://github.com/user-attachments/assets/42f9ff87-1b86-4535-8055-cf50a276de2d" width="800"/>
   <img src="https://github.com/user-attachments/assets/443630f3-0ebd-40ee-8755-0ad8ca517442" width="800"/>
 </p>
 
@@ -106,7 +106,7 @@ Google Maps Platform과 Vuforia를 활용해 지도 및 증강현실 기능을 �
 > 아래 QR 코드를 스캔하면 APK 설치가 가능합니다.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dfd8158d-c995-4ae4-8334-a31cc8aa366f" width="300"/>
+  <img src="https://github.com/user-attachments/assets/dfd8158d-c995-4ae4-8334-a31cc8aa366f" width="800"/>
 </p>
 
 ---
