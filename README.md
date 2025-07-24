@@ -27,7 +27,7 @@ Google Maps Platform과 Vuforia를 활용해 지도 및 증강현실 기능을 �
 
 ## 🎥 시연 영상
 
-📺 [시연 영상 바로 보기 (Google Drive)](https://drive.google.com/file/d/1ggw-kvoo-L-1aOLMZx97dVd6hZ41X5u-/view?usp=sharing)
+📺 [![시연 영상 보기](https://img.youtube.com/vi/Q9CMKY0LQfU/0.jpg)](https://www.youtube.com/watch?v=Q9CMKY0LQfU)
 
 ---
 
